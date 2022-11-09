@@ -49,7 +49,7 @@ const ProductTopCrousal = () => {
             <Slider {...settings}>
        
                {gadgets.map((gadget)=>(
-                <div key={gadget.id} className='flex flex-col w-fit justify-center items-center shadow-md hover:scale-105 duration-500 shadow-sky-400 '>
+                <div key={gadget.id} className='flex flex-col w-fit justify-center items-center cursor-pointer shadow-md hover:scale-105 duration-500 shadow-sky-400 '>
                 <img src={gadget.src} alt="laptop"
                     className='m-auto' />
                 <p className={`text-red-500 ${gadget.style} mb-1`}>{gadget.title}</p>

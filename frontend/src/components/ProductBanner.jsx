@@ -2,9 +2,9 @@ import React from 'react'
 
 function ProductBanner() {
   return (
-    <div>
+    <div className='relative'>
     <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL78538_221107_VPT-LV-a69dd225-4140-452b-aab3-064e2408b94d.jpg" alt="banner"
-     className='h-48' />
+     className='h-48 sm:' />
     
      <p className='text-6xl font-bold absolute top-16 left-2/4 text-white '>Great deals </p>
      <p  className='hidden text-3xl font-bold absolute top-32 right-1/4 text-white md:block'>happening right now.</p>
