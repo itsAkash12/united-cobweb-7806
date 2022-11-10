@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-     
+      {/* <TopSection />
+      <GiftCards /> */}
   <Products />
     </div>
   );
