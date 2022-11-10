@@ -1,4 +1,3 @@
-
 import './App.css';
 import Navbar from './components/Header/Navbar';
 import SmallNavbar from './components/Header/SmallNavbar';
@@ -9,16 +8,11 @@ import Products from './pages/Products';
 
 function App() {
   return (
-  
- 
-
     <div className="App">
-      
       <Navbar />
-      <TopSection />
-      <GiftCards />
-      <Products />
-
+      {/* <TopSection />
+      <GiftCards /> */}
+  <Products />
     </div>
   );
 }
