@@ -4,12 +4,15 @@ import SmallNavbar from './components/Header/SmallNavbar';
 import TopSection from './components/HomeSection/TopSection';
 import "./App.css";
 import GiftCards from "./components/GiftCards/GiftCards";
-import Footer from "./components/Footer/Footer";
+import Products from './pages/Products';
 
 function App() {
   return (
     <div className="App">
-      <GiftCards />
+      <Navbar />
+      {/* <TopSection />
+      <GiftCards /> */}
+  <Products />
     </div>
   );
 }
