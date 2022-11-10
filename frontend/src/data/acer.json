@@ -8,7 +8,8 @@
     "price": "399.99",
     "save": "",
     "end": "Available to ship",
-    "brand": "Acer"
+    "brand": "Acer",
+    "buttonStyle":"mt-14"
   },
 
   {
