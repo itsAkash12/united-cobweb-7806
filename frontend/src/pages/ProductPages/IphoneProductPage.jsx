@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import {BiRightArrow} from "react-icons/bi"
 import { AiOutlineShoppingCart} from "react-icons/ai"
-import AmazonData from "../../data/amazon.json"
+import IphoneData from "../../data/iphone.json"
 
 
-const AmazonProductPage = () => {
+const IphoneProductPage = () => {
    const [data,setData]=useState([])
    useEffect(()=>{
-    setData(AmazonData)
+    setData(IphoneData)
    },[])
    
   return (
@@ -30,7 +30,7 @@ const AmazonProductPage = () => {
             </div>
             
           </div>
-          <div className='grid grid-cols-1' >
+         <div className='grid grid-cols-1' >
           
           {data.map((el)=>(
             <div key={el.id} className='flex  gap-2 sm:justify-between border-solid border-b-2 border-gray-200   '>
@@ -52,6 +52,8 @@ const AmazonProductPage = () => {
             <div className='w-1/3 '>
               <p className='text-sm sm:text-3xl font-bold mt-7 md:ml-24'>$ {el.price}</p>
               <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2  md:ml-24'> {el.save}</p>
+              <p className='md:ml-24 text-sky-800'>{el.p1}</p>
+              <p className='md:ml-24 text-sky-800'>{el.p2}</p>
               <button className='text-sm my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold 2xl:px-14 sm:py-2 rounded-lg'> <AiOutlineShoppingCart size={20}/>Add to card</button>
             </div>
             </div>
@@ -67,4 +69,4 @@ const AmazonProductPage = () => {
   )
 }
 
-export default AmazonProductPage
+export default IphoneProductPage

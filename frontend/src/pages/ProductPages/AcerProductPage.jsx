@@ -2,17 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {BiRightArrow} from "react-icons/bi"
 import { AiOutlineShoppingCart} from "react-icons/ai"
 import AcerData from "../../data/acer.json"
-// {
-//   "id": 1,
-//   "imgUrl": "https://multimedia.bbycastatic.ca/multimedia/products/250x250/147/14763/14763270.jpg",
-//   "title": "Acer 31.5'' FHD 165Hz 1ms GTG Curved VA LED FreeSync Gaming Monitor (ED320QR Sbiipx) - Black",
-//   "rate": "⭐⭐⭐⭐ (62 Reviews)",
-//   "top": "",
-//   "price": "399.99",
-//   "save": "",
-//   "end": "Available to ship",
-//   "brand": "Acer"
-// }
+
 
 const AcerProductPage = () => {
    const [data,setData]=useState([])
@@ -40,18 +30,18 @@ const AcerProductPage = () => {
             </div>
             
           </div>
-         <div className='grid grid-cols-3 sm:grid-cols-1' >
+          <div className='grid grid-cols-1' >
           
           {data.map((el)=>(
-            <div key={el.id} className='flex flex-col sm:flex-row  gap-2 sm:justify-between border-solid border-b-2 border-gray-200   '>
+            <div key={el.id} className='flex  gap-2 sm:justify-between border-solid border-b-2 border-gray-200   '>
             
             
             <div className='w-1/3'>
               <img src={el.imgUrl} alt="" className='cursor-pointer' />
             </div>
             <div className='w-1/3'>
-              <p className='hidden sm:block text-blue-500 hover:underline cursor-pointer mt-7 text-md'>{el.title}  </p>
-              <p className='block sm:hidden text-2xl font-bold'>{el.brand}</p>
+              <p className=' text-blue-500 hover:underline cursor-pointer mt-7 text-md'>{el.title}  </p>
+              
             <p className='text-sm my-2'><span className='font-bold'>Brand:</span>{el.brand}</p>
             <p className='sm:text-sm'>{el.rate}</p>
             <p className='my-2 text-sm text-green-900 font-bold'>Get it today</p>
@@ -61,13 +51,12 @@ const AcerProductPage = () => {
             </div>
             <div className='w-1/3 '>
               <p className='text-sm sm:text-3xl font-bold mt-7 md:ml-24'>$ {el.price}</p>
-              <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2  md:ml-24'>{el.save}</p>
+              <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2  md:ml-24'> {el.save}</p>
               <button className='text-sm my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold 2xl:px-14 sm:py-2 rounded-lg'> <AiOutlineShoppingCart size={20}/>Add to card</button>
             </div>
             </div>
           ))}
           </div>
-          
           
          
         </div>

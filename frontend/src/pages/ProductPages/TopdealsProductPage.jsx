@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import {BiRightArrow} from "react-icons/bi"
 import { AiOutlineShoppingCart} from "react-icons/ai"
-import AmazonData from "../../data/amazon.json"
+import TopdealsData from "../../data/topdeals.json"
 
 
-const AmazonProductPage = () => {
+const TopdealsProductPage = () => {
    const [data,setData]=useState([])
    useEffect(()=>{
-    setData(AmazonData)
+    setData(TopdealsData)
    },[])
    
   return (
@@ -42,7 +42,7 @@ const AmazonProductPage = () => {
             <div className='w-1/3'>
               <p className=' text-blue-500 hover:underline cursor-pointer mt-7 text-md'>{el.title}  </p>
               
-            <p className='text-sm my-2'><span className='font-bold'>Brand:</span>{el.brand}</p>
+            
             <p className='sm:text-sm'>{el.rate}</p>
             <p className='my-2 text-sm text-green-900 font-bold'>Get it today</p>
             <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2'>{el.top}</p>
@@ -58,7 +58,6 @@ const AmazonProductPage = () => {
           ))}
           </div>
           
-          
          
         </div>
       </div>
@@ -67,4 +66,4 @@ const AmazonProductPage = () => {
   )
 }
 
-export default AmazonProductPage
+export default TopdealsProductPage
