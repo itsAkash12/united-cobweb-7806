@@ -18,7 +18,7 @@ import { SiYoutubemusic } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <Box w="full" h="auto" bg="#f0f2f4" className="mainContainer">
+    <Box h="auto" bg="#f0f2f4" className="mainContainer">
       <Box className="banner">
         <Image src={footer} />
       </Box>
@@ -28,10 +28,10 @@ const Footer = () => {
         h="auto"
         mt="30px"
         ml="38px"
-        display="flex"
+        className="grid_container_footer"
       >
         {/* <Grid templateColumns="repeat(4, 1fr)" gap={6}> */}
-        <Box w="290px" h="480px">
+        <Box className="div_box">
           <Heading fontSize="16px">Order & Purchases</Heading>
           <a className="a" href="">
             Check Order Status
@@ -77,7 +77,7 @@ const Footer = () => {
           </a>{" "}
           <br />
         </Box>
-        <Box w="290px" h="400px">
+        <Box className="div_box">
           <Heading fontSize="16px">Support & Services</Heading>
           <a className="a" href="">
             Visit our Support Center
@@ -127,7 +127,7 @@ const Footer = () => {
           </a>{" "}
           <br />
         </Box>
-        <Box w="290px" h="400px">
+        <Box className="div_box">
           <Heading fontSize="16px">Partnerships</Heading>
           <a className="a" href="">
             Affiliate Program
@@ -177,7 +177,7 @@ const Footer = () => {
           </a>
         </Box>
         {/* </Grid> */}
-        <Box w="425px" h="400px" mt="15px" bg="#fff">
+        <Box className="div_signup" bg="#fff">
           <a className="a1" href="">
             Sign in or Create Account
           </a>
@@ -225,7 +225,7 @@ const Footer = () => {
         </p>
       </Box>
       <hr className="hr3" />
-      <Box p="10px 0px 10px 25px " display="flex" justifyContent="space-around">
+      <Box p="10px 0px 10px 25px " className="down_container">
         <a className="a2" href="">
           Accessibility{" "}
         </a>

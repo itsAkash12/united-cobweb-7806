@@ -17,15 +17,13 @@ import SmarthomeProductPage from './pages/ProductPages/SmarthomeProductPage';
 import SponseredProductPage from './pages/ProductPages/SponseredProductPage';
 import TopdealsProductPage from './pages/ProductPages/TopdealsProductPage';
 import SliderCarousel from './components/Slider/SliderCarousel';
+import BottomSection from './components/HomeSection/BottomSection';
+import Homepage from './components/HomeSection/Homepage';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <TopSection />
-      <MiddleSection />
-      {/* <GiftCards /> */}
-      <SliderCarousel />
+      <Homepage></Homepage>
   {/* <Products /> */}
   {/* <AcerProductPage />  */}
  

@@ -68,7 +68,7 @@ function SmallNavbar() {
         <Link className="link">Top deals</Link>
         <Link className="link">Deal of the Day</Link>
         <Link className="link">Totaltech Membership</Link>
-        <Link className="link">Credit Cards</Link>
+        <Link className="link">Gift Ideas</Link>
         <Menu>
           <MenuButton
             bg="#0046BE"
