@@ -23,7 +23,6 @@ const Footer = () => {
         <Image src={footer} />
       </Box>
       <Box
-        // border="1px solid teal"
         w="95%"
         h="auto"
         mt="30px"
