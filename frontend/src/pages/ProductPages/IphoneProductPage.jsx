@@ -6,9 +6,34 @@ import IphoneData from "../../data/iphone.json"
 
 const IphoneProductPage = () => {
    const [data,setData]=useState([])
+   const [value,setValue]=useState("")
    useEffect(()=>{
     setData(IphoneData)
    },[])
+
+   const handleOnchange=(e)=>{
+    let selectedValue=e.target.value
+    if(selectedValue=="INC"){
+      let updatedData=IphoneData.sort((a,b)=>{
+        return a.price - b.price
+      })
+     
+        setData(updatedData)
+        setValue(selectedValue)
+       
+      
+    }
+    if(selectedValue=="DEC"){
+      let updatedData=IphoneData.sort((a,b)=>{
+        return b.price - a.price
+      })
+      
+      setData(updatedData)
+      setValue(selectedValue)
+    }
+        
+       
+      }
    
   return (
     <div>
@@ -22,11 +47,12 @@ const IphoneProductPage = () => {
           <div className='flex justify-between items-center border-solid border-b-2 border-gray-200'>
             <p>20 items</p>
             <div>
-            <span>Sort by:</span><select name="" id="" className='border-solid ml-2  border-2 border-gray-200 p-2 focus:none'>
-              <option value="">High to low</option>
-              <option value="">Low to high</option>
+            <span>Sort by:{value}</span><select onChange={handleOnchange} className='border-solid ml-2  border-2 border-gray-200 p-2 focus:none'>
              
-            </select>
+             <option value="DEC">High to low</option>
+             <option value="INC">Low to high</option>
+            
+           </select>
             </div>
             
           </div>

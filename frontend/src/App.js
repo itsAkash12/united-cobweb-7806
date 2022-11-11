@@ -24,10 +24,10 @@ function App() {
       <GiftCards /> */}
   {/* <Products /> */}
   <AcerProductPage /> 
-  {/* <AmazonProductPage /> 
- <AndroidProductPage />
-   <IphoneProductPage />
-  <LatestProductPage />
+ 
+ {/* <AndroidProductPage /> */}
+   {/* <IphoneProductPage /> */}
+  {/* <LatestProductPage />
   <MarketPlaceProductPage />
   <SmarthomeProductPage />
   <SponseredProductPage />
