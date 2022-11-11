@@ -1,6 +1,6 @@
 import React from 'react'
-import ProductBanner from '../components/ProductBanner'
-import ProductTopCrousal from '../components/ProductTopCrousal'
+import ProductBanner from '../components/Products/ProductBanner'
+import ProductTopCrousal from '../components/Products/ProductTopCrousal'
 function Products() {
   return (
     <div >
@@ -9,27 +9,34 @@ function Products() {
    <div className='border-solid border-b-2 border-gray-200'>
    <p className='text-3xl w-fit mt-4 ml-8 py-2 '>Products</p>
    </div>
-   <div className='mt-8 relative'>
-    <img src="https://pisces.bbystatic.com/image2/BestBuy_US/dam/custom_fluid_xl_mmt-599505-715e51c3-2718-4a87-a9b7-1dd78586d130.jpg" alt="" />
-       <div className='w-fit absolute top-14 right-96 '>
+   <div className='mt-8 ' style={{ 
+      backgroundImage: `url(" https://pisces.bbystatic.com/image2/BestBuy_US/dam/custom_fluid_xl_mmt-599505-715e51c3-2718-4a87-a9b7-1dd78586d130.jpg")` ,
+      backgroundRepeat: 'no-repeat',
+    
+    }}>
+  
+       
+       <div className='pt-16 w-fit ml-96 pl-96'>
+       <div className='w-fit '>
         <img src="https://pisces.bbystatic.com/image2/BestBuy_US/Gallery/UpgradePlus_Powered_by_Citizens_Pay_hz_2L_K_ai_renditionpicker_319x319-218068.png;maxHeight=76;maxWidth=319" alt="" 
-        className='w-11/12'/>
+        className='w-11/12 ml-20'/>
        </div>
-       <div className='hidden w-fit absolute top-32 right-1 xl:block '>
+       <div className='w-fit ml-20 my-6 '>
         <p className='text-4xl font-bold'>Amazing new <span className='text-5xl'>MacBook</span><span className='text-red-700'>.</span></p>
       
       <p className='text-3xl font-bold'>Unbelievable monthly price.</p>
       
        
-       <p className='my-2'>From $19.99/month for 36 months. $280.35 final payment due in month 37. Based on <br /> original price of $999.99. Final payment will be made by Best Buy if product is returned <br /> or upgraded per the Upgrade+ Program terms.</p>
-       <p className='text-sm'>Eligibility subject to credit approval. Monthly payment amount for the first 36 months is based on creditworthiness. <br /> Limited time promotion.</p>
+       <p className='hidden xl:block my-2'>From $19.99/month for 36 months. $280.35 final payment due in month 37. Based on <br /> original price of $999.99. Final payment will be made by Best Buy if product is returned <br /> or upgraded per the Upgrade+ Program terms.</p>
+       <p className='hidden 2xl:block text-sm'>Eligibility subject to credit approval. Monthly payment amount for the first 36 months is based on creditworthiness. <br /> Limited time promotion.</p>
       
 
-      <button className='bg-red-700 mt-3 text-white p-2 rounded-sm'>Learn More</button>
+      <button className='bg-blue-700 my-6 text-white p-2 rounded-sm'>Learn More</button>
+       </div>
        </div>
    </div>
 
-<div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-2 mt-10'>
+{/* <div className='grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-2 mt-10'>
   <div className='border-2 p-3'>
     <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-air-space-gray-config-201810?wid=1078&hei=624&fmt=jpeg&qlt=90&.v=1664499515473" alt="" />
   <p className='text-md  text-sky-500 cursor-pointer hover:underline my-2 '>MacBook <br />
@@ -86,7 +93,7 @@ Shop Now</p>
 
 <button className='bg-blue-600 text-white rounded-md py-1 mt-10 text-sm px-8'>Shop Now</button>
   </div>
-</div>
+</div> */}
 
    {/* <div style={{ 
       backgroundImage: `url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/gl-77114-giftideas-ep-td-half_der-e5653191-ad0b-42de-a484-6759bfdd6ad5.jpg")` ,
