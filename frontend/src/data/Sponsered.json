@@ -7,7 +7,8 @@
         "review":"(4 Reviews)",
         "top":"Top Deal",
         "save":"250",
-        "price":"499"
+        "price":"499",
+        "end": "Available to ship"
       },
       {
         "id":2,
@@ -17,7 +18,8 @@
         "review":"(0 Reviews)",
         "top":"",
         "save":"",
-        "price":"199.99"
+        "price":"199.99",
+        "end": "Available to ship"
       },
       {
         "id":3,
@@ -27,7 +29,8 @@
         "review":"(0 Reviews)",
         "top":"",
         "save":"",
-        "price":"1,899.99"
+        "price":"1,899.99",
+        "end": "Available to ship"
       },
       {
         "id":4,
@@ -37,7 +40,8 @@
         "review":"(3292 Reviews)",
         "top":"",
         "save":"",
-        "price":"71.99"
+        "price":"71.99",
+        "end": "Available to ship"
       },
       {
         "id":5,
@@ -47,7 +51,8 @@
         "review":"(3695 Reviews)",
         "top":"",
         "save":"",
-        "price":"69.99"
+        "price":"69.99",
+        "end": "Available to ship"
       },
       {
         "id":6,
@@ -57,7 +62,8 @@
         "review":"(32.99 Reviews)",
         "top":"",
         "save":"",
-        "price":"32.99"
+        "price":"32.99",
+        "end": "Available to ship"
       },
       {
         "id":7,
@@ -67,7 +73,8 @@
         "review":"(1 Reviews)",
         "top":"",
         "save":"",
-        "price":"603"
+        "price":"603",
+        "end": "Available to ship"
       },
       {
         "id":8,
@@ -77,7 +84,8 @@
         "review":"(516 Reviews)",
         "top":"",
         "save":"",
-        "price":"74.99"
+        "price":"74.99",
+        "end": "Available to ship"
       },
       {
         "id":9,
@@ -87,7 +95,8 @@
         "review":"(261 Reviews)",
         "top":"",
         "save":"",
-        "price":"104"
+        "price":"104",
+        "end": "Available to ship"
       },
       {
         "id":10,
@@ -97,7 +106,8 @@
         "review":"(740 Reviews)",
         "top":"",
         "save":"",
-        "price":"179.99"
+        "price":"179.99",
+        "end": "Available to ship"
       },
       {
         "id":11,
@@ -107,7 +117,8 @@
         "review":"(2960 Reviews)",
         "top":"",
         "save":"",
-        "price":"699.99"
+        "price":"699.99",
+        "end": "Available to ship"
       },
       {
         "id":12,
@@ -117,7 +128,8 @@
         "review":"(789 Reviews)",
         "top":"",
         "save":"",
-        "price":"699.99"
+        "price":"699.99",
+        "end": "Available to ship"
       },
       {
         "id":13,
@@ -127,7 +139,8 @@
         "review":"(901 Reviews)",
         "top":"Top Deal",
         "save":"10",
-        "price":"59.99"
+        "price":"59.99",
+        "end": "Available to ship"
       },
       {
         "id":14,
@@ -137,7 +150,8 @@
         "review":"(17 Reviews)",
         "top":"",
         "save":"",
-        "price":"63.98"
+        "price":"63.98",
+        "end": "Available to ship"
       },
       {
         "id":15,
@@ -147,7 +161,8 @@
         "review":"(4 Reviews)",
         "top":"Top Deal",
         "save":"250",
-        "price":"499.99"
+        "price":"499.99",
+        "end": "Available to ship"
       }
       
 ]

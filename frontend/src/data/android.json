@@ -7,7 +7,8 @@
         "price":"20.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":2,
@@ -17,7 +18,8 @@
         "price":"25.84",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":3,
@@ -27,7 +29,8 @@
         "price":"19.58",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":4,
@@ -37,7 +40,8 @@
         "price":"47.29",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":5,
@@ -47,7 +51,8 @@
         "price":"25.84",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":6,
@@ -57,7 +62,8 @@
         "price":"19.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":7,
@@ -67,7 +73,8 @@
         "price":"9.99",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":8,
@@ -77,7 +84,8 @@
         "price":"25.84",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":9,
@@ -87,7 +95,8 @@
         "price":"33.34",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },{
         "id":10,
         "imgUrl": "https://multimedia.bbycastatic.ca/multimedia/products/250x250/149/14965/14965884.jpg",
@@ -96,7 +105,8 @@
         "price":"15.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
      
       {
@@ -107,7 +117,8 @@
         "price":"30.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":12,
@@ -117,7 +128,8 @@
         "price":"20.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":13,
@@ -127,7 +139,8 @@
         "price":"20.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":14,
@@ -137,7 +150,8 @@
         "price":"53.13",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":15,
@@ -147,7 +161,8 @@
         "price":"19.58",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":16,
@@ -157,7 +172,8 @@
         "price":"20.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       
       {
@@ -168,7 +184,8 @@
         "price":"53.13",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":18,
@@ -178,7 +195,8 @@
         "price":"30.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":19,
@@ -188,7 +206,8 @@
         "price":"33.00",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       },
       {
         "id":20,
@@ -198,7 +217,8 @@
         "price":"",
         "p1":"Start activation online",
         "p2":"Sold in stores",
-        "brand":"android"
+        "brand":"android",
+        "end": "Available to ship"
       }
 
 ]
