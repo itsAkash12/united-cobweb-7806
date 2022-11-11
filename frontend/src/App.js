@@ -6,6 +6,16 @@ import "./App.css";
 import GiftCards from "./components/GiftCards/GiftCards";
 import MiddleSection from './components/HomeSection/MiddleSection';
 import SliderCard from './components/Slider/SliderCard';
+import Products from './pages/Products';
+import AcerProductPage from './pages/ProductPages/AcerProductPage';
+import AmazonProductPage from './pages/ProductPages/AmazonProductPage';
+import AndroidProductPage from './pages/ProductPages/AndroidProductPage';
+import IphoneProductPage from './pages/ProductPages/IphoneProductPage';
+import LatestProductPage from './pages/ProductPages/LatestProductPage';
+import MarketPlaceProductPage from './pages/ProductPages/MarketplaceProducrPage';
+import SmarthomeProductPage from './pages/ProductPages/SmarthomeProductPage';
+import SponseredProductPage from './pages/ProductPages/SponseredProductPage';
+import TopdealsProductPage from './pages/ProductPages/TopdealsProductPage';
 
 function App() {
   return (
@@ -15,6 +25,18 @@ function App() {
       <MiddleSection />
       <GiftCards />
       {/* <SliderCard /> */}
+      <TopSection />
+      <GiftCards />
+  {/* <Products /> */}
+  <AcerProductPage /> 
+ 
+ {/* <AndroidProductPage /> */}
+   {/* <IphoneProductPage /> */}
+  {/* <LatestProductPage />
+  <MarketPlaceProductPage />
+  <SmarthomeProductPage />
+  <SponseredProductPage />
+  <TopdealsProductPage /> */}
     </div>
   );
 }
