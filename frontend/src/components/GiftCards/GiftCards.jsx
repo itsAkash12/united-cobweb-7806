@@ -6,7 +6,7 @@ import "../../styles/Gift.css";
 
 const GiftCards = () => {
   return (
-    <Box width="full" h="auto">
+    <Box width="full" h="auto" mb="50px">
       <Box width="full" h="auto">
         <p className="p">Best Buy</p>
       </Box>
