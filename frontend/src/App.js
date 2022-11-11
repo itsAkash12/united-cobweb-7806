@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="App">
       <Homepage></Homepage>
-      <Products />
+      {/* <Products /> */}
     </div>
   );
 }
