@@ -22,11 +22,11 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <TopSection />
-      <MiddleSection />
+      {/* <TopSection />
+      <MiddleSection /> */}
       {/* <GiftCards /> */}
-      <SliderCarousel />
-  {/* <Products /> */}
+      {/* <SliderCarousel /> */}
+  <Products />
   {/* <AcerProductPage />  */}
  
  {/* <AndroidProductPage /> */}
