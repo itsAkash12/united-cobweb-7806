@@ -2,7 +2,22 @@ Footer {
   padding: 0;
   margin: 0;
 }
-
+.mainContainer {
+  width: 99%;
+  margin: auto;
+  margin-top:40px ;
+}
+.grid_container_footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.div_box{
+  width: 20%;
+}
+.div_signup{
+  width: 30%;
+}
 .a {
   color: #0046be;
   font-size: 13px;
@@ -90,17 +105,48 @@ p {
 .a2:hover {
   text-decoration: underline;
 }
-
-@media all and (min-width: 401px) and (max-width: 800px) {
-  .mainContainer {
-    width: 100%;
-  }
- 
+.down_container{
+  display: flex;
+  justify-content: space-between;
 }
 
-@media all and (min-width: 100px) and (max-width: 400px) {
-  .banner {
-    width: 100%;
+@media all and (min-width: 450px) and (max-width: 800px) {
+  .mainContainer {
+    width: 90%;
+    margin: auto;
+  }
+  .grid_container_footer{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .div_box{
+    width: 90%;
+  }
+  .div_signup{
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 200px) and (max-width: 450px) {
+  .mainContainer {
+    width: 80%;
+    margin: auto;
+    margin-top:40px ;
+  }
+  .grid_container_footer{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .div_box{
+    width: 80%;
+  }
+  .div_signup{
+    width: 90%;
+    margin-left: -15px;
+  }
+  .down_container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
   }
 }
 
