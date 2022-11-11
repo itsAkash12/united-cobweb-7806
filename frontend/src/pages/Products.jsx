@@ -95,10 +95,11 @@ function Products() {
     }
    
   ];
+  
   return (
     <div >
       <AllProductPageRoute />
- <ProductBanner />
+ <ProductBanner/>
    <ProductTopCrousal />
    <div className='border-solid border-b-2 border-gray-200'>
    <p className='text-3xl w-fit mt-4 ml-8 py-2 '>Products</p>

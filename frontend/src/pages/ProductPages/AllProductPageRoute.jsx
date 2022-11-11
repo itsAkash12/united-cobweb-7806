@@ -10,7 +10,7 @@ import TopdealsProductPage from './TopdealsProductPage'
 
 import SmarthomeProductPage from './SmarthomeProductPage'
 import MarketPlaceProductPage from './MarketplaceProducrPage'
-import AcerSinglePage from '../SingleProductPage/AcerSinglePage'
+
 
 
 
@@ -27,7 +27,7 @@ const AllProductPageRoute = () => {
             <Route path='/smarthomeproductpage' element={<SmarthomeProductPage />}></Route>
             <Route path='/sponseredproductpage' element={<SponseredProductPage />}></Route>
             <Route path='/topdealsproductpage' element={<TopdealsProductPage />}></Route>
-            <Route path='/acerproductpage:id' element={<AcerSinglePage />}></Route>
+          
         </Routes>
     </div>
   )
