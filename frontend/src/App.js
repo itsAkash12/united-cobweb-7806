@@ -16,6 +16,7 @@ import MarketPlaceProductPage from './pages/ProductPages/MarketplaceProducrPage'
 import SmarthomeProductPage from './pages/ProductPages/SmarthomeProductPage';
 import SponseredProductPage from './pages/ProductPages/SponseredProductPage';
 import TopdealsProductPage from './pages/ProductPages/TopdealsProductPage';
+import SliderCarousel from './components/Slider/SliderCarousel';
 
 function App() {
   return (
@@ -23,12 +24,10 @@ function App() {
       <Navbar />
       <TopSection />
       <MiddleSection />
-      <GiftCards />
-      {/* <SliderCard /> */}
-      <TopSection />
-      <GiftCards />
+      {/* <GiftCards /> */}
+      <SliderCarousel />
   {/* <Products /> */}
-  <AcerProductPage /> 
+  {/* <AcerProductPage />  */}
  
  {/* <AndroidProductPage /> */}
    {/* <IphoneProductPage /> */}
