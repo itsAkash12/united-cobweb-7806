@@ -20,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon,SearchIcon } from "@chakra-ui/icons";
 import SmallNavbar from "./SmallNavbar";
-import Link from "react-router-dom"
+import {Link} from "react-router-dom"
 function Navbar() {
   const [city, setCity] = useState("");
   let key = "dae6521ae39fc64f8d201f17c57efeb5";
@@ -102,7 +102,7 @@ function Navbar() {
                     color="white"
                     _hover={{ bg: "white", color: "#0046BE" }}
                   >
-                    <Link>Sign In</Link>
+                    <Link to="/login">Sign In</Link>
                   </Button>
                 </Box>
               </MenuItem>
