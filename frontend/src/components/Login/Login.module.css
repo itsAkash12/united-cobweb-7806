@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -20px;
+    margin-top: -70px;
   }
   
   .heading{
@@ -44,7 +44,7 @@
   .footer button {
     outline: none;
     border: none;
-    background-color: #9900ff;
+    background-color: #0046be;
     color: #fff;
     border-radius: 5px;
     font-weight: bold;
@@ -60,7 +60,9 @@
   }
   
   .footer button:hover {
-    background-color: #aa2aff;
+    background-color: white;
+    color: #0046be;
+    border:1px solid #0046be
   }
   
   .footer p {
@@ -70,7 +72,7 @@
   
   .footer p span a {
     font-weight: bold;
-    color: #9900ff;
+    color: #0046be;
     letter-spacing: 1px;
     font-size: 1rem;
     text-decoration: none;

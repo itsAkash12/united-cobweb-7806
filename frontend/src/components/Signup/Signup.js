@@ -5,10 +5,12 @@ import GoogleButton from "react-google-button";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import InputControl from "../InputControl/InputControl";
 import { auth } from "../../firebase";
+import { useToast } from '@chakra-ui/react'
 
 import styles from "./Signup.module.css";
 
 function Signup() {
+  const toast = useToast()
   function googleSignIn() {
     const googleAuthProvider = new GoogleAuthProvider();
     return signInWithPopup(auth, googleAuthProvider);
@@ -17,9 +19,24 @@ function Signup() {
     e.preventDefault();
     try {
       await googleSignIn();
-      navigate("/home");
+      toast({
+        title: 'Account created.',
+        description: "Successfully Created your Account",
+        status: 'success',
+        position:"top",
+        duration: 3000,
+        isClosable: true,
+      })
+      navigate("/");
     } catch (error) {
       console.log(error.message);
+      toast({
+        title: (error.message),
+        status: 'error',
+        position:"top",
+        duration: 3000,
+        isClosable: true,
+      })
     }
   };
   const navigate = useNavigate();
@@ -46,11 +63,26 @@ function Signup() {
         await updateProfile(user, {
           displayName: values.name,
         });
+        toast({
+          title: 'Account created.',
+          description: "Successfully Created your Account",
+          status: 'success',
+          position:"top",
+          duration: 3000,
+          isClosable: true,
+        })
         navigate("/");
       })
       .catch((err) => {
         setSubmitButtonDisabled(false);
         setErrorMsg(err.message);
+        toast({
+          title: (err.message),
+          status: 'error',
+          position:"top",
+          duration: 3000,
+          isClosable: true,
+        })
       });
   };
 
@@ -92,7 +124,7 @@ function Signup() {
            className="g-btn"
            type="dark"
            onClick={handleGoogleSignIn}
-          style={{width:"420px"}} />
+          style={{width:"420px", backgroundColor:"#0046be"}} />
 
           <p>
             Already have an account?{" "}

@@ -17,6 +17,8 @@
     height: fit-content;
     width: fit-content;
     background-color: #fff;
+    border: 1px solid black;
+
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
     padding: 30px;
     border-radius: 10px;
@@ -41,7 +43,6 @@
   .footer button {
     outline: none;
     border: none;
-    background-color: rgb(66,133,244);
     background-color: #0046be;
     color: #fff;
     border-radius: 5px;
@@ -71,7 +72,6 @@
   
   .footer p span a {
     font-weight: bold;
-    color: rgb(66,133,244);
     color: #0046be;
     letter-spacing: 1px;
     font-size: 1rem;
