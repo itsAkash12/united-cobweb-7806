@@ -25,6 +25,7 @@ const AmazonProductPage = () => {
    
    const handleClick=(el)=>{
      setItemData([...itemData,el])
+     alert(`Item: ${el.title} \n \n Price: ${el.price} is added to cart`)
    }
    useEffect(()=>{
     localStorage.setItem('cartData',JSON.stringify(itemData))
@@ -36,7 +37,7 @@ const AmazonProductPage = () => {
    
    const handleOnchange=(e)=>{
     let selectedValue=e.target.value
-    if(selectedValue=="INC"){
+    if(selectedValue==="INC"){
       let updatedData=AmazonData.sort((a,b)=>{
         return a.price - b.price
       })
@@ -46,7 +47,7 @@ const AmazonProductPage = () => {
        
       
     }
-    if(selectedValue=="DEC"){
+    if(selectedValue==="DEC"){
       let updatedData=AmazonData.sort((a,b)=>{
         return b.price - a.price
       })

@@ -25,6 +25,7 @@ const AndroidProductPage = () => {
    
 const handleClick=(el)=>{
   setItemData([...itemData,el])
+  alert(`Item:${el.title} \n \n  Price: ${el.price} is added to cart`)
 
 }
 useEffect(()=>{
@@ -36,17 +37,17 @@ useEffect(()=>{
 
    const handleOnchange=(e)=>{
     let selectedValue=e.target.value
-    if(selectedValue=="INC"){
+    if(selectedValue==="INC"){
       let updatedData=AndroidData.sort((a,b)=>{
         return a.price - b.price
       })
      
         setData(updatedData)
         setValue(selectedValue)
-       
+        
       
     }
-    if(selectedValue=="DEC"){
+    if(selectedValue==="DEC"){
       let updatedData=AndroidData.sort((a,b)=>{
         return b.price - a.price
       })
@@ -57,6 +58,9 @@ useEffect(()=>{
         
        
       }
+   
+      
+      
    
   return (
     <div>
@@ -114,7 +118,7 @@ useEffect(()=>{
               <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2  md:ml-24'> {el.save}</p>
               <p className='md:ml-24 text-sky-800'>{el.p1}</p>
               <p className='md:ml-24 text-sky-800'>{el.p2}</p>
-              <button className='text-xs my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold sm:px-6 lg:py-2 rounded-lg'  onClick={()=>handleClick(el)}> <AiOutlineShoppingCart size={20}/>Add to card</button>
+              <button className='text-xs my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold sm:px-6 lg:py-2 rounded-lg'  onClick={()=>handleClick(el)}  > <AiOutlineShoppingCart size={20}/>Add to card</button>
             </div>
             </div>
           ))}
