@@ -156,6 +156,7 @@ function LaptopSlider() {
                 title={el.title}
                 rate={el.rate}
                 price={el.price}
+                link={"/acerproductpage"}
               />
             </div>
           ))}

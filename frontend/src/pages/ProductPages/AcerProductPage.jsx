@@ -3,7 +3,6 @@ import { BiRightArrow } from "react-icons/bi"
 import { AiOutlineShoppingCart } from "react-icons/ai"
 import { Link } from 'react-router-dom'
 import AcerData from "../../data/acer.json"
-import AllProductPageRoute from './AllProductPageRoute'
 
 
 
@@ -95,7 +94,6 @@ const AcerProductPage = () => {
 
   return (
     <div>
-      <AllProductPageRoute />
       <div>
         <div className='border-solid border-b-4 border-gray-200 w-screen mt-8'></div>
         <div className='flex items-center gap-1 text-sm my-2 border-solid border-b-2 border-gray-200 w-screen pb-2'> Best Buy  <BiRightArrow size={10} />All categories</div>

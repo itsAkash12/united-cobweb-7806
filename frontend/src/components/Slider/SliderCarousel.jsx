@@ -163,6 +163,7 @@ function SliderCarousel() {
                 title={el.title}
                 rate={el.rate}
                 price={el.price}
+                link={"/iphoneproductpage"}
               />
             </div>
           ))}

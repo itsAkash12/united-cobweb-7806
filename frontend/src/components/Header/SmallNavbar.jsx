@@ -24,51 +24,45 @@ function SmallNavbar() {
             fontSize={['10px', '11px', '12px', '13px', '14px', '14px']}
             as={Button}
             rightIcon={<ChevronDownIcon />}
-          >
-            Holiday Deals
+          ><Link to="/products">Holiday Deals</Link>
           </MenuButton>
           <MenuList color="#0046BE">
             <MenuItem
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Black Friday deals Right Now
+            ><Link to="/latestproductpage">Black Friday deals Right Now</Link>
             </MenuItem>
             <MenuItem
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Gift Ideas
+            ><Link to="/giftcards">Gift Ideas</Link>
             </MenuItem>
             <MenuItem
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Laptop Guide 2022
+            ><Link to="/acerproductpage">Laptop Guide 2022</Link>
             </MenuItem>
             <MenuItem
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Explore Holiday Inspirations
+            ><Link to="/iphoneproductpage">Explore iPhones</Link>
             </MenuItem>
             <MenuItem
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Holiday FAQs
+            ><Link to="/marketplaceproductpage">Market Place offers</Link>
             </MenuItem>
           </MenuList>
         </Menu>
-        <Link className="link">Top deals</Link>
-        <Link className="link">Deal of the Day</Link>
-        <Link className="link">Totaltech Membership</Link>
-        <Link className="link">Gift Ideas</Link>
+        <Link to="/products" className="link">Top Deals</Link>
+        <Link to="/latestproductpage" className="link">Deal of the Duty</Link>
+        <Link to="/giftcards" className="link">Gift Ideas</Link>
+        <Link to="/marketplaceproductpage" className="link">Marketplace Products</Link>
         <Menu>
           <MenuButton
             bg="#0046BE"
@@ -86,22 +80,19 @@ function SmallNavbar() {
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Gift Cards
+            ><Link to="/giftcards">Gift Cards</Link>
             </MenuItem>
             <MenuItem
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Gift Ideas
+            ><Link to="/smarthomeproductpage">Smart Home Ideas</Link>
             </MenuItem>
             <MenuItem
               p="14px 12px"
               borderBottom="1px solid rgb(160, 160, 160)"
               _hover={{ textDecoration: "underline black" }}
-            >
-              Laptops & Pc's
+            ><Link to="/acerproductpage">Laptops & Pc's</Link>
             </MenuItem>
             <MenuItem
               p="14px 12px"

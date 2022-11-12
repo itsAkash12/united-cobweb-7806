@@ -1,24 +1,27 @@
-import { Box } from '@chakra-ui/react'
-import React from 'react'
-import "../../styles/Slider.css"
+import { Box } from "@chakra-ui/react";
+import React from "react";
+import { Link } from "react-router-dom";
+import "../../styles/Slider.css";
 
-function SliderCard({img, title, rate, price}) {
+function SliderCard({ img, title, rate, price, link }) {
   return (
-    <Box className='slider_card_container'>
-      <Box className='slider_card_parent'>
-        <Box>
+    <Box className="slider_card_container">
+      <Link to={link}>
+        <Box className="slider_card_parent">
+          <Box>
             <img src={img} alt="iphone" />
-        </Box>
-        <Box>
+          </Box>
+          <Box>
             <p>{title}</p>
-        </Box>
-        <Box>
+          </Box>
+          <Box>
             <p>{rate}</p>
             <p>₹{price}</p>
+          </Box>
         </Box>
-      </Box>
+      </Link>
     </Box>
-  )
+  );
 }
 
-export default SliderCard
+export default SliderCard;

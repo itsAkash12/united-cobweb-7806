@@ -17,12 +17,13 @@ import SponseredProductPage from "./pages/ProductPages/SponseredProductPage";
 import TopdealsProductPage from "./pages/ProductPages/TopdealsProductPage";
 import SliderCarousel from "./components/Slider/SliderCarousel";
 import BottomSection from "./components/HomeSection/BottomSection";
-import Homepage from "./components/HomeSection/Homepage";
+import Homepage from "./pages/Homepage/Homepage";
+import AllRoutes from "./routes/AllRoutes";
 
 function App() {
   return (
     <div className="App">
-      <Homepage></Homepage>
+      <AllRoutes />
       {/* <Products /> */}
     </div>
   );
