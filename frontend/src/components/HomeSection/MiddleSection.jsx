@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/MiddleSection.css";
 import { Box } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 function MiddleSection() {
   return (
@@ -24,7 +25,7 @@ function MiddleSection() {
                 Save when you shop the Best Buy Outlet for clearance, open-box,
                 refurbished and pre-owned items.
               </p>
-              <button>View Outlet Deals</button>
+              <button><Link to="/products">View Outlet Deals</Link></button>
             </Box>
           </Box>
         </Box>
@@ -44,7 +45,7 @@ function MiddleSection() {
             </Box>
             <Box>
               <p>Apple - iPhone 14 128GB - Blue (Verizon)</p>
-              <button>Save on Similar items</button>
+              <button><Link to="/iphoneproductpage">Save on Similar items</Link></button>
             </Box>
           </Box>
         </Box>
