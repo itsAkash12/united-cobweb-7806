@@ -27,15 +27,7 @@ function App() {
       {/* <GiftCards /> */}
       {/* <SliderCarousel /> */}
   <Products />
-  {/* <AcerProductPage />  */}
  
- {/* <AndroidProductPage /> */}
-   {/* <IphoneProductPage /> */}
-  {/* <LatestProductPage />
-  <MarketPlaceProductPage />
-  <SmarthomeProductPage />
-  <SponseredProductPage />
-  <TopdealsProductPage /> */}
     </div>
   );
 }

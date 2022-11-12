@@ -6,7 +6,7 @@ function ProductBanner() {
 
   return (
     <div >
-      <AllProductPageRoute  />
+      {/* <AllProductPageRoute  /> */}
     <div style={{ 
       backgroundImage: `url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL78538_221107_VPT-LV-a69dd225-4140-452b-aab3-064e2408b94d.jpg")` ,
       backgroundRepeat: 'no-repeat',
