@@ -5,14 +5,33 @@ import IphoneData from "../../data/iphone.json"
 import { Link } from 'react-router-dom'
 import { ProductsLinks } from './AcerProductPage'
 
+
+function getLocalData() {
+  let cdata = localStorage.getItem('cartData')
+  console.log(cdata)
+  if (!cdata) {
+    return []
+  } else {
+
+    return JSON.parse(localStorage.getItem('cartData'))
+  }
+
+}
+
+
+
 const IphoneProductPage = () => {
    const [data,setData]=useState([])
    const [value,setValue]=useState("")
 
-   const [cartData,setCartData]=useState([])
+   const [itemData,setItemData]=useState(getLocalData())
+
+   useEffect(()=>{
+    localStorage.setItem('cartData',JSON.stringify(itemData))
+      },[itemData])
    
 const handleClick=(el)=>{
-  setCartData([...cartData,el])
+  setItemData([...itemData,el])
 }
    useEffect(()=>{
     setData(IphoneData)
@@ -98,7 +117,7 @@ const handleClick=(el)=>{
               <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2  md:ml-24'> {el.save}</p>
               <p className='md:ml-24 text-sky-800'>{el.p1}</p>
               <p className='md:ml-24 text-sky-800'>{el.p2}</p>
-              <button className='text-sm my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold 2xl:px-14 sm:py-2 rounded-lg'  onClick={()=>handleClick(el)}> <AiOutlineShoppingCart size={20}/>Add to card</button>
+              <button className='text-xs my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold sm:px-6 lg:py-2 rounded-lg'  onClick={()=>handleClick(el)}> <AiOutlineShoppingCart size={20}/>Add to card</button>
             </div>
             </div>
           ))}

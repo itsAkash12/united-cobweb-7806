@@ -5,6 +5,18 @@ import { Link } from 'react-router-dom'
 import AcerData from "../../data/acer.json"
 
 
+function getLocalData() {
+  let cdata = localStorage.getItem('cartData')
+  console.log(cdata)
+  if (!cdata) {
+    return []
+  } else {
+
+    return JSON.parse(localStorage.getItem('cartData'))
+  }
+
+}
+
 
 export const ProductsLinks = [
   {
@@ -58,13 +70,13 @@ export const ProductsLinks = [
 const AcerProductPage = () => {
   const [data, setData] = useState([])
   const [value, setValue] = useState("")
-  const [cartData, setCartData] = useState([])
+  const [itemData, setItemData] = useState(getLocalData())
 
   const handleClick = (el) => {
-    setCartData([...cartData, el])
+    setItemData([...itemData, el])
   }
-  console.log(cartData)
-
+ 
+console.log(itemData)
   useEffect(() => {
     setData(AcerData)
   }, [])
@@ -91,6 +103,9 @@ const AcerProductPage = () => {
 
 
   }
+  useEffect(()=>{
+localStorage.setItem('cartData',JSON.stringify(itemData))
+  },[itemData])
 
   return (
     <div>
@@ -146,7 +161,7 @@ const AcerProductPage = () => {
                   <div className='w-1/3 '>
                     <p className='text-sm sm:text-3xl font-bold mt-7 md:ml-24'>$ {el.price}</p>
                     <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2  md:ml-24'> {el.save}</p>
-                    <button className='text-sm my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold 2xl:px-14 sm:py-2 rounded-lg' onClick={() => handleClick(el)}> <AiOutlineShoppingCart size={20} />Add to card</button>
+                    <button className='text-xs my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold sm:px-6 lg:py-2 rounded-lg'  onClick={()=>handleClick(el)}> <AiOutlineShoppingCart size={20}/>Add to card</button>
                   </div>
                 </div>
               ))}
