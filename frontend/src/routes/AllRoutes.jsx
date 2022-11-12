@@ -17,8 +17,8 @@ import SponseredProductPage from "../pages/ProductPages/SponseredProductPage";
 import TopdealsProductPage from "../pages/ProductPages/TopdealsProductPage";
 import Products from "../pages/Products";
 
-// import {Login} from "../components/Login/Login"
-// import {Signup} from "../components/Signup/Signup"
+import Login from "../components/Login/Login"
+import Signup from "../components/Signup/Signup"
 
 function AllRoutes() {
   return (
@@ -26,8 +26,8 @@ function AllRoutes() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
-          {/* <Route path="/login" element={<Login />}></Route>
-          <Route path="/signup" element={<Signup />}></Route> */}
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/signup" element={<Signup />}></Route>
           <Route path="/giftcards" element={<GiftCards />}></Route>
           <Route path="/acerproductpage" element={<AcerProductPage />}></Route>
           <Route path="/amazonproductpage" element={<AmazonProductPage />}></Route>

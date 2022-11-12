@@ -18,9 +18,9 @@ import {
   Button,
   Input,
 } from "@chakra-ui/react";
-import { ChevronDownIcon,SearchIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import SmallNavbar from "./SmallNavbar";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 function Navbar() {
   const [city, setCity] = useState("");
   let key = "dae6521ae39fc64f8d201f17c57efeb5";
@@ -95,28 +95,32 @@ function Navbar() {
             <MenuList>
               <MenuItem>
                 <Box>
-                  <Button
-                    w="xs"
-                    bg="#0046BE"
-                    border="1px solid #0046BE"
-                    color="white"
-                    _hover={{ bg: "white", color: "#0046BE" }}
-                  >
-                    <Link>Sign In</Link>
-                  </Button>
+                  <Link to="/login">
+                    <Button
+                      w="xs"
+                      bg="#0046BE"
+                      border="1px solid #0046BE"
+                      color="white"
+                      _hover={{ bg: "white", color: "#0046BE" }}
+                    >
+                      Sign In
+                    </Button>
+                  </Link>
                 </Box>
               </MenuItem>
               <MenuItem>
                 <Box>
-                  <Button
-                    w="xs"
-                    bg="white"
-                    color="#0046BE"
-                    border="1px solid #0046BE"
-                    _hover={{ bg: "#0046BE", color: "white" }}
-                  >
-                   <Link to="/signup"> Create Account</Link>
-                  </Button>
+                  <Link to="/signup">
+                    <Button
+                      w="xs"
+                      bg="white"
+                      color="#0046BE"
+                      border="1px solid #0046BE"
+                      _hover={{ bg: "#0046BE", color: "white" }}
+                    >
+                      Create Account
+                    </Button>
+                  </Link>
                 </Box>
               </MenuItem>
             </MenuList>
