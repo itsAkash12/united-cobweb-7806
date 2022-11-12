@@ -22,10 +22,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <TopSection />
-      <MiddleSection /> */}
-      {/* <GiftCards /> */}
-      {/* <SliderCarousel /> */}
+     
   <Products />
  
     </div>
