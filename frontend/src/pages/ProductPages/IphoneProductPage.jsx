@@ -32,6 +32,7 @@ const IphoneProductPage = () => {
    
 const handleClick=(el)=>{
   setItemData([...itemData,el])
+  alert(`Item: ${el.title} \n \n Price: ${el.price} is added to cart`)
 }
    useEffect(()=>{
     setData(IphoneData)
@@ -39,7 +40,7 @@ const handleClick=(el)=>{
 
    const handleOnchange=(e)=>{
     let selectedValue=e.target.value
-    if(selectedValue=="INC"){
+    if(selectedValue==="INC"){
       let updatedData=IphoneData.sort((a,b)=>{
         return a.price - b.price
       })
@@ -49,7 +50,7 @@ const handleClick=(el)=>{
        
       
     }
-    if(selectedValue=="DEC"){
+    if(selectedValue==="DEC"){
       let updatedData=IphoneData.sort((a,b)=>{
         return b.price - a.price
       })
