@@ -3,7 +3,6 @@ import {Link} from "react-router-dom"
 import ProductBanner from '../components/Products/ProductBanner'
 import ProductTopCrousal from '../components/Products/ProductTopCrousal'
 
-
 function Products() {
   const ProductData = [
     {
@@ -98,7 +97,6 @@ function Products() {
   
   return (
     <div >
-   
  <ProductBanner/>
    <ProductTopCrousal />
    <div className='border-solid border-b-2 border-gray-200'>

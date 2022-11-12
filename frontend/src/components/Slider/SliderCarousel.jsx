@@ -1,9 +1,10 @@
 import React from "react";
 import SliderCard from "./SliderCard";
 import Slider from "react-slick";
-import "../../styles/Slider.css"
+import "../../styles/Slider.css";
 import SampleNextArrow from "./SampleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";
+import { Box } from "@chakra-ui/react";
 
 function SliderCarousel() {
   const IphoneData = [
@@ -130,38 +131,44 @@ function SliderCarousel() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: false,
-          dots: true
-        }
+          dots: true,
+        },
       },
       {
         breakpoint: 550,
         settings: {
           slidesToShow: 2,
-          initialSlide: 2
-        }
+          initialSlide: 2,
+        },
       },
       {
         breakpoint: 400,
         settings: {
           slidesToShow: 1,
-        }
-      }
-    ]
+        },
+      },
+    ],
   };
   return (
-    <div className="carousel_container">
-      <Slider {...settings}>
-        {IphoneData.map((el, index) => (
-          <div key={index}>
-            <SliderCard
-              img={el.imgUrl}
-              title={el.title}
-              rate={el.rate}
-              price={el.price}
-            />
-          </div>
-        ))}
-      </Slider>
+    <div>
+      <Box className="iPhone_slider_heading">
+        <p>Best selling iPhones</p>
+      </Box>
+      <div className="carousel_container">
+        <Slider {...settings}>
+          {IphoneData.map((el, index) => (
+            <div key={index}>
+              <SliderCard
+                img={el.imgUrl}
+                title={el.title}
+                rate={el.rate}
+                price={el.price}
+                link={"/iphoneproductpage"}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 }
