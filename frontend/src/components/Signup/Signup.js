@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-
+import GoogleButton from "react-google-button";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import InputControl from "../InputControl/InputControl";
 import { auth } from "../../firebase";
 
 import styles from "./Signup.module.css";
 
 function Signup() {
+  function googleSignIn() {
+    const googleAuthProvider = new GoogleAuthProvider();
+    return signInWithPopup(auth, googleAuthProvider);
+  }
+  const handleGoogleSignIn = async (e) => {
+    e.preventDefault();
+    try {
+      await googleSignIn();
+      navigate("/home");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
   const navigate = useNavigate();
   const [values, setValues] = useState({
     name: "",
@@ -72,6 +86,14 @@ function Signup() {
           <button onClick={handleSubmission} disabled={submitButtonDisabled}>
             Signup
           </button>
+          <h1 style={{display:"flex",justifyContent:"center"}}>-------Or-------</h1>
+                 
+          <GoogleButton
+           className="g-btn"
+           type="dark"
+           onClick={handleGoogleSignIn}
+          style={{width:"420px"}} />
+
           <p>
             Already have an account?{" "}
             <span>
