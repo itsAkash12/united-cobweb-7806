@@ -16,7 +16,7 @@ function SliderCard({ img, title, rate, price, link }) {
           </Box>
           <Box>
             <p>{rate}</p>
-            <p>₹{price}</p>
+            <p>${price}</p>
           </Box>
         </Box>
       </Link>
