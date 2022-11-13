@@ -59,7 +59,7 @@ function Navbar() {
     <Box id="navbar_container">
       <Box className="nav_items">
         <Box className="logo_container">
-          <img src={logo} alt="logo" />
+          <Link to="/"><img src={logo} alt="logo" /></Link>
         </Box>
         <Box className="location web_navbar">
           <FontAwesomeIcon

@@ -19,7 +19,7 @@
   justify-content: center;
   align-items: center;
 }
-.logo_container > img {
+.logo_container >a> img {
   width: 60px;
   border-radius: 50%;
 }
