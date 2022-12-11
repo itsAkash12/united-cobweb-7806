@@ -3,6 +3,7 @@ import "../../styles/TopSection.css";
 import { Box, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 function TopSection() {
+  // feedback: fw20_1302 - can we move data to different file? It will make the component light weigth
   const data = [
     {
       img: "https://pisces.bbystatic.com/image2/BestBuy_US/dam/MMT-611301-ghp-img-icons-laptops-686b0d25-dbcf-484f-8c88-046275bf8ef5.jpg;maxWidth=220",
