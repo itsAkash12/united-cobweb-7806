@@ -5,6 +5,7 @@ import "../../styles/Slider.css"
 import SampleNextArrow from "../Slider/SampleNextArrow";
 import SamplePrevArrow from "../Slider/SamplePrevArrow";
 
+// feedback: fw19_0857 - move mock data out of the component
 function ProductTopCrousal() {
   const Productdata = [
     {
