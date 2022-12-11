@@ -100,6 +100,7 @@ useEffect(()=>{
               <img src={el.imgUrl} alt="" className='cursor-pointer' />
             </div>
             <div className='w-1/3'>
+              {/* feedback: fw19_0857 - can't we create a wrapper component for same type of elements? For ex: for paragraphs you can use one component and pass config to it*/}
               <p className=' text-blue-500 hover:underline cursor-pointer mt-7 text-md'>{el.title}  </p>
               
             
