@@ -30,6 +30,7 @@ const Footer = () => {
         className="grid_container_footer"
       >
         {/* <Grid templateColumns="repeat(4, 1fr)" gap={6}> */}
+{/*feedback: fw20_1302 - use loops for listing similar elements and Move static content to the Constant file*/}
         <Box className="div_box">
           <Heading fontSize="16px">Order & Purchases</Heading>
           <a className="a" href="">
