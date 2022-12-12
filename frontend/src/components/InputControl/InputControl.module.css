@@ -1,3 +1,6 @@
+/*
+- Use css grouping and nesting to write less code
+*/
 .container {
     display: flex;
     flex-direction: column;

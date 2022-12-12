@@ -13,6 +13,7 @@ function ProductBanner() {
     }}
     className="mt-10"
     >
+      {/* feedback: fw19_0857 - class name should be in meaningful text*/}
       <div  className="flex flex-col  w-2/3 h-full pt-10 xl:ml-96 xl:pl-96 ">
    <Link to="/topdealsproductpage">  <p className='text-sm ml-20 bg-red-700 p-2 rounded-lg  md:ml-80 text-white w-fit cursor-pointer '>Top deals</p></Link> 
       <p className='text-3xl 2xl:text-6xl md:ml-56 font-bold text-white w-fit '>Great deals</p>

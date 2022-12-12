@@ -59,6 +59,7 @@ function SmallNavbar() {
             </MenuItem>
           </MenuList>
         </Menu>
+{/* feedback: fw20_1302 - use loops for listing similar elements  */}
         <Link to="/products" className="link">Top Deals</Link>
         <Link to="/latestproductpage" className="link">Deal of the Duty</Link>
         <Link to="/giftcards" className="link">Gift Ideas</Link>
@@ -130,6 +131,7 @@ function SmallNavbar() {
             >
               Recently Viewed
             </MenuButton>
+{/* feedback: fw20_1302 - we can reduce the code below by using loops and passing config to it*/}
             <MenuList color="#0046BE">
               <MenuItem
                 p="14px 12px"

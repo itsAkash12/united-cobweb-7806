@@ -7,6 +7,7 @@ import SamplePrevArrow from "./SamplePrevArrow";
 import { Box } from "@chakra-ui/react";
 
 function LaptopSlider() {
+  // feedback : mock data 
   const LaptopData = [
     {
       id: 6,

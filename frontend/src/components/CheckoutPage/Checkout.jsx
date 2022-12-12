@@ -3,6 +3,7 @@ import { Box, Button, Heading, Image, Input } from "@chakra-ui/react";
 import "../../styles/Checkout.css";
 import { ImRadioUnchecked } from "react-icons/im";
 const Checkout = () => {
+  // feedback: fw19_1032 - use URL constant
   return (
     <Box w="full" h="650px" bg="#f0f2f4">
       <p className="top-p">Sold and shipped by Best Buy India</p>
