@@ -28,6 +28,7 @@
     "react-dom": "^18.2.0",
     "react-google-button": "^0.7.2",
     "react-icons": "^4.6.0",
+    "react-loading-skeleton": "^3.1.0",
     "react-redux": "^8.0.5",
     "react-router": "^6.4.3",
     "react-router-dom": "^6.4.3",
