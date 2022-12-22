@@ -8,6 +8,16 @@ import SinglePageSideBar from '../../components/SingleProductPage/SinglePageSide
 
 const SponseredProductPage = () => {
   const [data,setData]=useState([])
+  const handleOnchange=(e)=>{
+    let selectedValue=e.target.value
+    if(selectedValue=="INC"){
+      setData((prev) => [...prev.sort((a, b) => a.price - b.price)])
+    }else{
+      setData((prev) => [...prev.sort((a, b) => b.price - a.price)])
+    }
+    
+   
+  }
   let url="http://localhost:8080/product/sponsered"
   const handleSubmit =async () => {
 await fetch(url,{
@@ -37,7 +47,7 @@ useEffect(()=>{
 <SinglePageSideBar />
 
 <div className='sm:w-3/4'>
-   <TopSinglepage length={15} />
+   <TopSinglepage length={15}  handleOnchange={handleOnchange} />
     <div className='grid grid-cols-1' >
 
       {data.map((el) => (

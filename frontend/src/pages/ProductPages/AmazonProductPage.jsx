@@ -23,6 +23,16 @@ await fetch(url,{
     })
     .catch((err) => console.log(err))
 }
+const handleOnchange=(e)=>{
+  let selectedValue=e.target.value
+  if(selectedValue=="INC"){
+    setData((prev) => [...prev.sort((a, b) => a.price - b.price)])
+  }else{
+    setData((prev) => [...prev.sort((a, b) => b.price - a.price)])
+  }
+  
+ 
+}
 useEffect(()=>{
   handleSubmit()
 },[])
@@ -35,7 +45,7 @@ useEffect(()=>{
 <SinglePageSideBar />
 
 <div className='sm:w-3/4'>
-   <TopSinglepage length={20} />
+   <TopSinglepage length={20}  handleOnchange={handleOnchange} />
     <div className='grid grid-cols-1' >
 
       {data.map((el) => (
