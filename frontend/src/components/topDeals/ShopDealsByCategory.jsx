@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+
 let data = [
   {
     imgUrl:
@@ -62,7 +62,6 @@ let data = [
     title: "Cameras, Camcorders and Drones",
   },
 ];
-
 
 const ShopDealsByCategory = ({ className }) => {
   return (

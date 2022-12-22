@@ -1,13 +1,9 @@
 import React from "react";
-
 import styled from "styled-components";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
-import {
-  MdOutlineArrowBackIosNew,
-  MdOutlineArrowForwardIos,
-} from "react-icons/md";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SliderCard from "./SliderCard";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/bundle";

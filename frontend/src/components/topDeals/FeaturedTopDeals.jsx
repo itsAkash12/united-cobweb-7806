@@ -49,6 +49,7 @@ const Wrapper = styled.div`
 `;
 
 const FeaturedTopDeals = ({ data }) => {
+
   console.log(data);
   return (
     <Wrapper>
