@@ -1,10 +1,8 @@
-import React from 'react'
-import Navbar from '../../components/Header/Navbar'
-import SliderCarousel from '../../components/Slider/SliderCarousel'
-import BottomSection from '../../components/HomeSection/BottomSection'
-import MiddleSection from '../../components/HomeSection/MiddleSection'
-import TopSection from '../../components/HomeSection/TopSection'
-import Footer from "../../components/Footer/Footer"
+import React from "react";
+import SliderCarousel from "../../Components/Slider/SliderCarousel";
+import BottomSection from "../../Components/HomeSection/BottomSection";
+import MiddleSection from "../../Components/HomeSection/MiddleSection";
+import TopSection from "../../Components/HomeSection/TopSection";
 
 function Homepage() {
   return (
@@ -14,7 +12,7 @@ function Homepage() {
       <SliderCarousel />
       <BottomSection />
     </div>
-  )
+  );
 }
 
-export default Homepage
+export default Homepage;

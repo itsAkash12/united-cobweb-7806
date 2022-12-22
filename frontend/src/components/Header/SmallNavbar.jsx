@@ -60,7 +60,7 @@ function SmallNavbar() {
           </MenuList>
         </Menu>
         <Link to="/products" className="link">Top Deals</Link>
-        <Link to="/latestproductpage" className="link">Deal of the Duty</Link>
+        <Link to="/dealoftheday" className="link">Deal of the Day</Link>
         <Link to="/giftcards" className="link">Gift Ideas</Link>
         <Link to="/marketplaceproductpage" className="link">Marketplace Products</Link>
         <Menu>
