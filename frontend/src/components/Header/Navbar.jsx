@@ -21,25 +21,23 @@ import {
 import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import SmallNavbar from "./SmallNavbar";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Navbar() {
+  const [user, setUser] = useState(false);
+  let token = localStorage.getItem("token");
+  const store = useSelector((store) => store.auth.data.token);
+  console.log(store);
+
+  console.log("token", token);
+
+  const handlelogout = () => {
+    localStorage.removeItem("token");
+    setUser(false);
+    alert("LogOut Successfully 😊✔");
+  };
+
   const [city, setCity] = useState("");
-  // const token = localStorage.getItem("token");
-
-  // if (token) {
-  //   const user_information = jwt_decode(token, "secret");
-  //   localStorage.setItem("user_info", JSON.stringify(user_information));
-  // }
-  // const local_storage_name = localStorage.getItem("user_name");
-
-  // let user_name = localStorage.getItem("user_info");
-  // user_name = JSON.parse(user_name);
-  // const handleUserLogOut = () => {
-  //   localStorage.removeItem("user_info");
-  //   localStorage.removeItem("token");
-  //   alert("LogOut Successfully 😊✔");
-  // };
-
   let key = "dae6521ae39fc64f8d201f17c57efeb5";
   let data;
   const options = {
@@ -70,8 +68,10 @@ function Navbar() {
   };
   useEffect(() => {
     getLocation();
-  }, []);
+    setUser(token);
+  }, [user, store]);
 
+  console.log("user", user);
   return (
     <Box id="navbar_container">
       <Box className="nav_items">
@@ -100,17 +100,31 @@ function Navbar() {
             icon={faUser}
           ></FontAwesomeIcon>
           <Menu className="web_navbar">
-            <MenuButton
-              bg="#0046BE"
-              color="white"
-              _hover={{ bg: "#0046BE", color: "white" }}
-              _active={{ bg: "#0046BE", color: "white" }}
-              as={Button}
-              fontSize="18px"
-              rightIcon={<ChevronDownIcon />}
-            >
-              Account
-            </MenuButton>
+            {user ? (
+              <MenuButton
+                bg="#0046BE"
+                color="white"
+                ml="5px"
+                fontWeight="600"
+                fontSize="18px"
+                onClick={handlelogout}
+              >
+                Logout
+              </MenuButton>
+            ) : (
+              <MenuButton
+                bg="#0046BE"
+                color="white"
+                _hover={{ bg: "#0046BE", color: "white" }}
+                _active={{ bg: "#0046BE", color: "white" }}
+                as={Button}
+                fontSize="18px"
+                rightIcon={<ChevronDownIcon />}
+              >
+                Account
+              </MenuButton>
+            )}
+
             <MenuList>
               <MenuItem>
                 <Box>
