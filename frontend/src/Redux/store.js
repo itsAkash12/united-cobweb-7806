@@ -1,6 +1,7 @@
 import { productReducer } from "./Product Reducer/ProductReducer";
 import thunk from "redux-thunk";
-// import { reducer, cartreducer } from "./Card Reducer/reducer";
+import { reducer, cartreducer } from "./Card Reducer/reducer";
+import authReducer from "./auth/reducer";
 import {
   legacy_createStore as createStore,
   combineReducers,
@@ -10,8 +11,9 @@ import {
 
 const rootReducer = combineReducers({
   products: productReducer,
-  // reducer,
-//   cartreducer,
+  auth: authReducer,
+  reducer,
+  cartreducer,
 });
 
 const composeEnhancers =

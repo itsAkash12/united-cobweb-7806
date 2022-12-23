@@ -13,12 +13,9 @@ function Home(props) {
           <Link to="/signup">Signup</Link>
         </h1>
       </div>
-
       <br />
       <br />
       <br />
-
-      {/* <h2>{props.name ? `Welcome - ${props.name}` : "Login please"}</h2> */}
     </div>
   );
 }

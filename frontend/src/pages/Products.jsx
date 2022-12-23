@@ -77,9 +77,6 @@ function Products() {
         ))}
       </div>
 
-    
- 
-
     </div>
   );
 }

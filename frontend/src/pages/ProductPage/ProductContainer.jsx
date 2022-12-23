@@ -418,7 +418,7 @@ const ProductContainer = () => {
                 <p>
                   <span>Best Buy Only</span> <Switch />
                 </p>
-                <div style={{ border: "1px solid gray", padding: "5px 5px " }}>
+                <p>
                   Sort
                   <span>
                     <select
@@ -432,7 +432,7 @@ const ProductContainer = () => {
                       <option value="sr">Highest Rated</option>
                     </select>
                   </span>
-                </div>
+                </p>
               </div>
             </div>
             <div className="productGrid">

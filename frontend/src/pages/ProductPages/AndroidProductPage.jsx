@@ -2,9 +2,9 @@ import React from 'react'
 import { BiRightArrow } from "react-icons/bi"
 import { useEffect } from 'react'
 import { useState } from 'react'
-import SingleProductPage from '../../Components/SingleProductPage/SingleProductPage'
-import TopSinglepage from '../../Components/SingleProductPage/TopSinglepage'
-import SinglePageSideBar from '../../Components/SingleProductPage/SinglePageSideBar'
+import SingleProductPage from '../../components/SingleProductPage/SingleProductPage'
+import TopSinglepage from '../../components/SingleProductPage/TopSinglepage'
+import SinglePageSideBar from '../../components/SingleProductPage/SinglePageSideBar'
 
 const AndroidProductPage = () => {
   const [data,setData]=useState([])
