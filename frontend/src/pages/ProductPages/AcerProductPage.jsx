@@ -3,30 +3,38 @@ import { BiRightArrow } from "react-icons/bi";
 import { useEffect } from "react";
 import { useState } from "react";
 
-import SingleProductPage from "../../Components/SingleProductPage/SingleProductPage";
-import TopSinglepage from "../../Components/SingleProductPage/TopSinglepage";
-import SinglePageSideBar from "../../Components/SingleProductPage/SinglePageSideBar";
+import SingleProductPage from '../../components/SingleProductPage/SingleProductPage'
+import TopSinglepage from '../../components/SingleProductPage/TopSinglepage'
+import SinglePageSideBar from '../../components/SingleProductPage/SinglePageSideBar'
+
 
 const AcerProductPage = () => {
-  const [data, setData] = useState([]);
-
-  let url = "http://localhost:8080/product/acer";
-  const handleSubmit = async () => {
-    await fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
+  const [data,setData]=useState([])
+ 
+  
+  let url="http://localhost:8080/product/acer"
+  const handleSubmit =async () => {
+    
+await fetch(url,{
+        method : "GET",
+        headers: {
+            'Content-Type': 'application/json',
+          },
+        
     })
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res);
-      })
-      .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    handleSubmit();
-  }, []);
+    .then((res) => res.json())
+    .then((res) => {
+      
+      setData(res)
+    
+    
+       
+    })
+    .catch((err) => console.log(err))
+}
+useEffect(()=>{
+  handleSubmit()
+},[])
   return (
     <div>
       <div className="border-solid border-b-4 border-gray-200 w-screen mt-8"></div>
@@ -38,27 +46,19 @@ const AcerProductPage = () => {
       <div className="flex w-11/12 m-auto gap-8  ">
         <SinglePageSideBar />
 
-        <div className="sm:w-3/4">
-          <TopSinglepage length={20} />
-          <div className="grid grid-cols-1">
-            {data.map((el) => (
-              <SingleProductPage
-                imgUrl={el.imgUrl}
-                title={el.title}
-                id={el._id}
-                price={el.price}
-                save={el.save}
-                brand={el.brand}
-                rate={el.rate}
-                top={el.top}
-                end={el.end}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+<div className='sm:w-3/4'>
+   <TopSinglepage length={20} />
+    <div className='grid grid-cols-1' >
 
-export default AcerProductPage;
+      {data.map((el) => (
+       <SingleProductPage imgUrl={el.imgUrl} title={el.title} id={el._id} price={el.price} save={el.save} brand={el.brand}
+       rate={el.rate} top={el.top} end={el.end} />
+      ))}
+    </div>
+
+
+  </div>
+  </div>
+</div>
+  )
+}
