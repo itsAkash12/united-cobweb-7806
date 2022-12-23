@@ -18,7 +18,7 @@ const SponseredProductPage = () => {
     
    
   }
-  let url="http://localhost:8080/product/sponsered"
+  let url="https://techhubbackend-production.up.railway.app/product/sponsered"
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",

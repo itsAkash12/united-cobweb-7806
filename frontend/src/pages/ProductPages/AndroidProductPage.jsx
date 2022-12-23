@@ -8,7 +8,7 @@ import SinglePageSideBar from '../../Components/SingleProductPage/SinglePageSide
 
 const AndroidProductPage = () => {
   const [data,setData]=useState([])
-  let url="http://localhost:8080/product/android"
+  let url="https://techhubbackend-production.up.railway.app/product/android"
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",

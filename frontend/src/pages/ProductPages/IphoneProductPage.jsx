@@ -8,7 +8,7 @@ import SinglePageSideBar from '../../Components/SingleProductPage/SinglePageSide
 
 const IphoneProductPage = () => {
   const [data,setData]=useState([])
-  let url="http://localhost:8080/product/iphone"
+  let url="https://techhubbackend-production.up.railway.app/product/iphone"
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",

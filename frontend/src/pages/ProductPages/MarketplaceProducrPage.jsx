@@ -8,7 +8,7 @@ import SinglePageSideBar from '../../Components/SingleProductPage/SinglePageSide
 
 const MarketplaceProducrPage = () => {
   const [data,setData]=useState([])
-  let url="http://localhost:8080/product/marketplace"
+  let url="https://techhubbackend-production.up.railway.app/product/marketplace"
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",
