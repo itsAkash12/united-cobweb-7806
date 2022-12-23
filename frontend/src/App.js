@@ -8,11 +8,9 @@ function App() {
   return (
     <div className="App">
       <ChakraProvider>
-        {" "}
         <Navbar />
       </ChakraProvider>
       <AllRoutes />
-
       <ChakraProvider>
         <Footer />
       </ChakraProvider>

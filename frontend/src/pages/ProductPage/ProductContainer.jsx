@@ -13,14 +13,12 @@ import {
 } from "@mui/material";
 import { Switch } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getData } from "../../Redux/Product Reducer/action";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import {
-  getFilterData,
-  sortData,
-  getData,
-} from "../../Redux/ProductReducer/action";
+import { getFilterData, sortData } from "../../Redux/Product Reducer/action";
 
 const categories = [
   {
@@ -116,7 +114,6 @@ let offers = [
   { title: "Open Box", value: "openBox" },
   { title: "Online Only", value: "onlineOnly" },
 ];
-
 const ProductContainer = () => {
   const [filterOtions, setFilterOptions] = useState([]);
   const [currantOffers, setCurrantOffers] = useState([]);
@@ -421,7 +418,7 @@ const ProductContainer = () => {
                 <p>
                   <span>Best Buy Only</span> <Switch />
                 </p>
-                <div style={{ border: "1px solid gray", padding: "5px 5px " }}>
+                <p>
                   Sort
                   <span>
                     <select
@@ -435,7 +432,7 @@ const ProductContainer = () => {
                       <option value="sr">Highest Rated</option>
                     </select>
                   </span>
-                </div>
+                </p>
               </div>
             </div>
             <div className="productGrid">

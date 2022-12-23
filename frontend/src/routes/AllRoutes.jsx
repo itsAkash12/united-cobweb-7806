@@ -16,7 +16,7 @@ import Login from "../Components/Login/Login";
 import Signup from "../Components/Signup/Signup";
 import { ChakraProvider } from "@chakra-ui/react";
 import DealOfTheDay from "../pages/DealOfTheDay/DealOfTheDay";
-import Detailsitem from "../pages/ProductDetailPage/Detailsitem";
+import Detailsitem from "../pages/Product Detail Page/Detailsitem";
 import ProductContainer from "../pages/ProductPage/ProductContainer";
 
 function AllRoutes() {
@@ -89,27 +89,9 @@ function AllRoutes() {
           element={<TopdealsProductPage />}
         ></Route>
         <Route path="/products" element={<Products />}></Route>
+        <Route path="/dealOfTheDay" element={<DealOfTheDay />}></Route>
         <Route path="/products/:id" element={<ProductContainer />} />
-        <Route path="/dealoftheday" element={<DealOfTheDay />}></Route>
         <Route path="/products/single/:id" element={<Detailsitem />}></Route>
-        <Route
-          path="*"
-          element={
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img
-                width="100%"
-                alt="image"
-                src="https://user-images.githubusercontent.com/107500115/201439031-168094ab-4575-4c9e-afc3-c6c79945a89e.png"
-              />
-            </div>
-          }
-        ></Route>
       </Routes>
     </div>
   );

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, Component } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 import SliderComp from "./SliderComp";
 import styled from "styled-components";
 
@@ -67,6 +69,7 @@ const Wrapper = styled.div`
 
 const CourosalContainer = ({
   button,
+  className,
   title,
   desc,
   logo,

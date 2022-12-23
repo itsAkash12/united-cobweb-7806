@@ -1,6 +1,6 @@
-import { productReducer } from "./ProductReducer/ProductReducer";
+import { productReducer } from "./Product Reducer/ProductReducer";
 import thunk from "redux-thunk";
-import { reducer, cartreducer } from "./CardReducer/reducer";
+import { reducer, cartreducer } from "./Card Reducer/reducer";
 import authReducer from "./auth/reducer";
 import {
   legacy_createStore as createStore,

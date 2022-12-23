@@ -21,8 +21,25 @@ import {
 import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import SmallNavbar from "./SmallNavbar";
 import { Link } from "react-router-dom";
+
 function Navbar() {
   const [city, setCity] = useState("");
+  // const token = localStorage.getItem("token");
+
+  // if (token) {
+  //   const user_information = jwt_decode(token, "secret");
+  //   localStorage.setItem("user_info", JSON.stringify(user_information));
+  // }
+  // const local_storage_name = localStorage.getItem("user_name");
+
+  // let user_name = localStorage.getItem("user_info");
+  // user_name = JSON.parse(user_name);
+  // const handleUserLogOut = () => {
+  //   localStorage.removeItem("user_info");
+  //   localStorage.removeItem("token");
+  //   alert("LogOut Successfully 😊✔");
+  // };
+
   let key = "dae6521ae39fc64f8d201f17c57efeb5";
   let data;
   const options = {
@@ -59,7 +76,9 @@ function Navbar() {
     <Box id="navbar_container">
       <Box className="nav_items">
         <Box className="logo_container">
-          <Link to="/"><img src={logo} alt="logo" /></Link>
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
         </Box>
         <Box className="location web_navbar">
           <FontAwesomeIcon
@@ -103,7 +122,7 @@ function Navbar() {
                       color="white"
                       _hover={{ bg: "white", color: "#0046BE" }}
                     >
-                      Sign In
+                      Login
                     </Button>
                   </Link>
                 </Box>
@@ -118,7 +137,7 @@ function Navbar() {
                       border="1px solid #0046BE"
                       _hover={{ bg: "#0046BE", color: "white" }}
                     >
-                      Create Account
+                      Sign In
                     </Button>
                   </Link>
                 </Box>
