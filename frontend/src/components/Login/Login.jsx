@@ -118,82 +118,76 @@ function Login() {
   };
 
   return (
-    <ChakraProvider>
-      <Modal isOpen={true} onClose={onClose} size={{ base: "sm", md: "lg" }}>
-        <ModalOverlay />
-        <ModalContent w="350px">
-          <ModalHeader
-            textAlign="center"
-            fontWeight="bold"
-            lineHeight="1"
-            fontSize="30px"
-            mt="25px"
-          >
-            LOGIN
-          </ModalHeader>
-          {/* <Img src="https://shopyourwardrobe.com/wp-content/uploads/2013/01/cost-of-being-a-shopaholic.jpg" /> */}
-          <ModalBody pb={6}>
-            <FormControl>
-              <FormLabel>Email</FormLabel>
-              <Input
-                type={"email"}
-                placeholder="Enter your email"
-                name="email"
-                onChange={handleChange}
-              />
-            </FormControl>
+    <>
+      <ChakraProvider>
+        <Modal isOpen={true} onClose={onClose} size={{ base: "sm", md: "lg" }}>
+          <ModalOverlay />
+          <ModalContent w="450px">
+            <ModalHeader
+              textAlign="center"
+              fontWeight="bold"
+              lineHeight="1"
+              fontSize="30px"
+              mt="25px"
+            >
+              LOGIN
+            </ModalHeader>
+            {/* <Img src="https://shopyourwardrobe.com/wp-content/uploads/2013/01/cost-of-being-a-shopaholic.jpg" /> */}
+            <ModalBody pb={6}>
+              <FormControl>
+                <FormLabel>Email</FormLabel>
+                <Input
+                  type={"email"}
+                  placeholder="Enter your email"
+                  name="email"
+                  onChange={handleChange}
+                />
+              </FormControl>
 
-            <FormControl mt={4}>
-              <FormLabel>Password</FormLabel>
-              <Input
-                type={"password"}
-                placeholder="Enter your password"
-                name="password"
-                onChange={handleChange}
-              />
-            </FormControl>
-          </ModalBody>
+              <FormControl mt={4}>
+                <FormLabel>Password</FormLabel>
+                <Input
+                  type={"password"}
+                  placeholder="Enter your password"
+                  name="password"
+                  onChange={handleChange}
+                />
+              </FormControl>
+            </ModalBody>
 
-          <ModalFooter>
-            <Button onClick={handleSubmit} colorScheme="pink" w="100%">
-              CONTINUE
+            <ModalFooter>
+              <Button onClick={handleSubmit} colorScheme="pink" w="100%">
+                CONTINUE
+              </Button>
+            </ModalFooter>
+
+            <Button
+              w="89%"
+              ml="25px"
+              onClick={() => {
+                // onClose();
+                navigate("/");
+              }}
+            >
+              Cancel
             </Button>
-          </ModalFooter>
+            <p className="login_or">or</p>
+            {/* ----- google Authenticated ----- */}
 
-          <Button
-            w="86%"
-            ml="25px"
-            onClick={() => {
-              // onClose();
-              navigate("/");
-            }}
-          >
-            Cancel
-          </Button>
-          <p className="login_or">or</p>
-          {/* ----- google Authenticated ----- */}
-
-          <GoogleButton
-            type="dark"
-            onClick={handleGoogleSignIn}
-            style={{
-              width: "86%",
-              marginBottom: "40px",
-              marginLeft: "25px",
-              backgroundColor: "#4285f4",
-            }}
-          />
-
-          <Box mb="25px">
-            <p className="loginBottam">
-              By proceeding, you agree to{" "}
-              <span className="span">Privacy Policy,</span> <br />
-              <span>Terms & Conditions</span>
-            </p>
-          </Box>
-        </ModalContent>
-      </Modal>
-    </ChakraProvider>
+            <GoogleButton
+              type="dark"
+              onClick={handleGoogleSignIn}
+              style={{
+                width: "89%",
+                marginBottom: "40px",
+                marginLeft: "25px",
+                backgroundColor: "#4285f4",
+              }}
+            />
+          </ModalContent>
+        </Modal>
+      </ChakraProvider>
+    </>
   );
 }
 
