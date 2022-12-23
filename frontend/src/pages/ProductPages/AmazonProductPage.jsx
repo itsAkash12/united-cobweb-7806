@@ -9,7 +9,7 @@ import SinglePageSideBar from '../../Components/SingleProductPage/SinglePageSide
 const AmazonProductPage = () => {
   const [data,setData]=useState([])
  
-  let url="http://localhost:8080/product/amazon"
+  let url="https://techhubbackend-production.up.railway.app/product/amazon"
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",

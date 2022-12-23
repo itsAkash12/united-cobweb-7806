@@ -12,7 +12,7 @@ const AcerProductPage = () => {
   const [data,setData]=useState([])
  
   
-  let url="http://localhost:8080/product/acer"
+  let url="https://techhubbackend-production.up.railway.app/product/acer"
   const handleSubmit =async () => {
     
 await fetch(url,{

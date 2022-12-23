@@ -18,7 +18,7 @@ const SmarthomeProductPage = () => {
     
    
   }
-  let url="http://localhost:8080/product/smarthome"
+  let url="https://techhubbackend-production.up.railway.app/product/smarthome"
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",
