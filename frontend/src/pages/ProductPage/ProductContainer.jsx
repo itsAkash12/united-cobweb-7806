@@ -13,12 +13,14 @@ import {
 } from "@mui/material";
 import { Switch } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { useState } from "react";
-import { useEffect } from "react";
-import { getData } from "../../Redux/Product Reducer/action";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { getFilterData, sortData } from "../../Redux/Product Reducer/action";
+import {
+  getFilterData,
+  sortData,
+  getData,
+} from "../../Redux/ProductReducer/action";
 
 const categories = [
   {
@@ -114,6 +116,7 @@ let offers = [
   { title: "Open Box", value: "openBox" },
   { title: "Online Only", value: "onlineOnly" },
 ];
+
 const ProductContainer = () => {
   const [filterOtions, setFilterOptions] = useState([]);
   const [currantOffers, setCurrantOffers] = useState([]);

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {auth} from "../firebase.js"
-import Login from './../components/Login/Login';
-import Signup from './../components/Signup/Signup';
+import Login from '../components/Login/Login';
+import Signup from '../components/Signup/Signup';
 
 function Registration(){
     const [userName,setUserName] = useState("");

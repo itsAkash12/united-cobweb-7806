@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Checkout from "../Components/CheckoutPage/Checkout";
 import GiftCards from "../Components/GiftCards/GiftCards";
 import Homepage from "../pages/Homepage/Homepage";
 import AcerProductPage from "../pages/ProductPages/AcerProductPage";
@@ -13,11 +12,12 @@ import SmarthomeProductPage from "../pages/ProductPages/SmarthomeProductPage";
 import SponseredProductPage from "../pages/ProductPages/SponseredProductPage";
 import TopdealsProductPage from "../pages/ProductPages/TopdealsProductPage";
 import Products from "../pages/Products";
-
 import Login from "../Components/Login/Login";
 import Signup from "../Components/Signup/Signup";
 import { ChakraProvider } from "@chakra-ui/react";
 import DealOfTheDay from "../pages/DealOfTheDay/DealOfTheDay";
+import Detailsitem from "../pages/ProductDetailPage/Detailsitem";
+import ProductContainer from "../pages/ProductPage/ProductContainer";
 
 function AllRoutes() {
   return (
@@ -31,8 +31,22 @@ function AllRoutes() {
             </ChakraProvider>
           }
         ></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/signup" element={<Signup />}></Route>
+        <Route
+          path="/login"
+          element={
+            <ChakraProvider>
+              <Login />
+            </ChakraProvider>
+          }
+        ></Route>
+        <Route
+          path="/signup"
+          element={
+            <ChakraProvider>
+              <Signup />
+            </ChakraProvider>
+          }
+        ></Route>
         <Route
           path="/giftcards"
           element={
@@ -75,8 +89,9 @@ function AllRoutes() {
           element={<TopdealsProductPage />}
         ></Route>
         <Route path="/products" element={<Products />}></Route>
-        <Route path="/checkout" element={<Checkout />}></Route>
-        <Route path="dealoftheday" element={<DealOfTheDay/>}></Route>
+        <Route path="/products/:id" element={<ProductContainer />} />
+        <Route path="/dealoftheday" element={<DealOfTheDay />}></Route>
+        <Route path="/products/single/:id" element={<Detailsitem />}></Route>
         <Route
           path="*"
           element={
