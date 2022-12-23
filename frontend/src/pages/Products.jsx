@@ -135,7 +135,6 @@ function Products() {
         </div>
       </div>
 
-<<<<<<< HEAD
       <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  mt-10">
         {ProductData.map((el) => (
           <div className=" border-2 p-3" key={el.id}>
@@ -158,18 +157,9 @@ function Products() {
         ))}
       </div>
 
-      {/* <div style={{ 
-      backgroundImage: `url("https://pisces.bbystatic.com/image2/BestBuy_US/dam/gl-77114-giftideas-ep-td-half_der-e5653191-ad0b-42de-a484-6759bfdd6ad5.jpg")` ,
-      backgroundRepeat: 'no-repeat',
     
-    }}
-    className="h-">
-   
-   </div> */}
-=======
  
 
->>>>>>> main
     </div>
   );
 }
