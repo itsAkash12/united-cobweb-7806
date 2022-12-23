@@ -38,7 +38,7 @@ userRouter.post("/login", async (req, res) => {
         // result == true if password matched
         if (result) {
           //genrate a token using jwt package and send back to user
-          var token = jwt.sign({ userID: check_exist[0]._id }, "secret");
+          var token = jwt.sign({ userID: check_exist[0]._id }, process.env.JWT_SECRET);
           res.send({ token: token });
         } else {
           res.send({ response: "please enter valid details" });
