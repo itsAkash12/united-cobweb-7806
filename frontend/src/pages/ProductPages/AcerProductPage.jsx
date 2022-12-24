@@ -3,9 +3,9 @@ import { BiRightArrow } from "react-icons/bi";
 import { useEffect } from "react";
 import { useState } from "react";
 
-import SingleProductPage from '../../components/SingleProductPage/SingleProductPage'
-import TopSinglepage from '../../components/SingleProductPage/TopSinglepage'
-import SinglePageSideBar from '../../components/SingleProductPage/SinglePageSideBar'
+import SingleProductPage from '../../Components/SingleProductPage/SingleProductPage'
+import TopSinglepage from "../../Components/SingleProductPage/TopSinglepage";
+import SinglePageSideBar from "../../Components/SingleProductPage/SinglePageSideBar";
 
 
 const AcerProductPage = () => {
@@ -62,3 +62,5 @@ useEffect(()=>{
 </div>
   )
 }
+
+export default AcerProductPage;

@@ -32,7 +32,7 @@ function Signup() {
   const authState = useSelector((state) => state.auth.userRegister);
   const dispatch = useDispatch();
 
-  console.log(authState);
+  // console.log(authState);
   React.useEffect(() => {
     if (authState.message === "user already registerd please login") {
       toast({
@@ -44,7 +44,7 @@ function Signup() {
       });
       dispatch({ type: AUTH_REGISTER_RESET });
     }
-    if (authState.message === "user registerd successfully") {
+    if (authState.message === "Registered successfully") {
       toast({
         title: authState.message,
         status: "success",
