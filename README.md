@@ -1,4 +1,4 @@
-![imagelink](static/images/tech_hub.png)
+![imagelink](static/images/TechHub.png)
 
 # BestBuy - Clone
 
@@ -51,13 +51,13 @@ You can login to our website from here by entering required details.
 
 ## Product Page
 
-![ProductPage](static/images/ProductPage1.png)
+![ProductPage](static/images/ProductPage.png)
 
 Here, you can choose a category of products whatever you want.
 
 ## Products Page
 
-![ProductsPage](static/images/ProductPage.png)
+![ProductsPage](static/images/ProductPage1.png)
 
 Here, you can see all the products and whenever you hover on any product you will see ADD TO CART option, bu clicking the button you can add the products to cart.
 

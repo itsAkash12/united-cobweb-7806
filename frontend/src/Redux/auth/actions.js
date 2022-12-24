@@ -8,6 +8,7 @@ import {
 } from "./actionTypes";
 
 import axios from "axios";
+import { user_api } from "../../url";
 
 export const authRegister = (data) => async (dispatch) => {
   // console.log("data:", data);
@@ -15,9 +16,8 @@ export const authRegister = (data) => async (dispatch) => {
     dispatch({ type: AUTH_REGISTER_REQUEST });
 
     const res = await axios.post(
-      "https://techhubbackend-production.up.railway.app/user/signup",
-      // "http://localhost:8080/user/signup",
-      // "https://trendy-vibes-backend-production.up.railway.app/user/register",
+      `${user_api}/signup`,
+
       {
         email: data.email,
         username: data.name,
@@ -48,9 +48,8 @@ export const authLogin = (data) => async (dispatch) => {
     dispatch({ type: AUTH_LOGIN_REQUEST });
 
     const res = await axios.post(
-      "https://techhubbackend-production.up.railway.app/user/login",
-      // "http://localhost:8080/user/login",
-      // "https://trendy-vibes-backend-production.up.railway.app/user/login",
+      `${user_api}/login`,
+
       data
     );
     console.log("res: ", res);

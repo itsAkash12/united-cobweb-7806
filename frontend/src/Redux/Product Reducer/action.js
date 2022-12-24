@@ -45,8 +45,7 @@ export const getData = (id) => async (dispatch) => {
     } else {
       finaldata = data.data;
     }
-    // let post = await axios.post("http://localhost:8080/filter", { finaldata });
-    // console.log(post);
+
     dispatch(getSuccess(finaldata));
   } catch (e) {
     console.log(e);
@@ -109,7 +108,6 @@ export const userAuth = (data, navigate) => async (dispatch) => {
   try {
     const url = "https://bestbuy-backend.onrender.com/api/auth";
     const res = await axios.post(url, data);
-
     let token = res.data.message;
     let user = res.data.userdata;
     localStorage.setItem("token", token);
@@ -120,8 +118,6 @@ export const userAuth = (data, navigate) => async (dispatch) => {
     if (token) {
       navigate("/");
     }
-    // window.location = "/";
-
     dispatch(Login(user.firstName));
     console.log(res.message);
   } catch (err) {

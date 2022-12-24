@@ -1,5 +1,7 @@
 // import axios from "axios";
-import {  GET_DATA_FAIL, GET_DATA_SUCC } from "./actionTypes";
+
+
+import { GET_DATA_FAIL, GET_DATA_SUCC } from "./actionTypes";
 
 const ADD = (item) => {
   console.log("item", item);
@@ -25,12 +27,11 @@ const REMOVE = (iteam) => {
   };
 };
 
-
 async function getProductsData(dispatch) {
   try {
     let res = await fetch("https://bestbuy-backend.onrender.com/");
     let products = await res.json();
-    //    console.log(products);
+    // console.log(products);
     dispatch({
       type: GET_DATA_SUCC,
       payload: products,

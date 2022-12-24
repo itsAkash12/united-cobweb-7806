@@ -5,7 +5,7 @@ import { useState } from 'react'
 import SingleProductPage from "../../Components/SingleProductPage/SingleProductPage";
 import TopSinglepage from "../../Components/SingleProductPage/TopSinglepage";
 import SinglePageSideBar from "../../Components/SingleProductPage/SinglePageSideBar";
-
+import { product_api } from "../../url";
 const SmarthomeProductPage = () => {
   const [data,setData]=useState([])
   const handleOnchange=(e)=>{
@@ -18,7 +18,8 @@ const SmarthomeProductPage = () => {
     
    
   }
-  let url="https://techhubbackend-production.up.railway.app/product/smarthome"
+
+    let url = `${product_api}/smarthome`;
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",

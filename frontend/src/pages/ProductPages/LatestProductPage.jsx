@@ -5,10 +5,12 @@ import { useState } from 'react'
 import SingleProductPage from "../../Components/SingleProductPage/SingleProductPage";
 import TopSinglepage from "../../Components/SingleProductPage/TopSinglepage";
 import SinglePageSideBar from "../../Components/SingleProductPage/SinglePageSideBar";
+import { product_api } from "../../url";
 
 const LatestProductPage = () => {
   const [data,setData]=useState([])
-  let url="https://techhubbackend-production.up.railway.app/product/latest"
+
+    let url = `${product_api}/latest`;
   const handleSubmit =async () => {
 await fetch(url,{
         method : "GET",
