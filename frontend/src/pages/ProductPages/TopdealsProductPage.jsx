@@ -7,27 +7,24 @@ import TopSinglepage from '../../Components/SingleProductPage/TopSinglepage'
 import SinglePageSideBar from '../../Components/SingleProductPage/SinglePageSideBar'
 
 const TopdealsProductPage = () => {
-  const [data,setData]=useState([])
-  let url="http://localhost:8080/product/topdeals"
-  const handleSubmit =async () => {
-await fetch(url,{
-        method : "GET",
-        headers: {
-            'Content-Type': 'application/json',
-          },
-        
+  const [data, setData] = useState([]);
+  let url = "http://localhost:8080/product/topdeals";
+  const handleSubmit = async () => {
+    await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
     })
-    .then((res) => res.json())
-    .then((res) => {
-      setData(res)
-    
-       
-    })
-    .catch((err) => console.log(err))
-}
-useEffect(()=>{
-  handleSubmit()
-},[])
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res);
+      })
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    handleSubmit();
+  }, []);
   return (
     <div>
       <div className="border-solid border-b-4 border-gray-200 w-screen mt-8"></div>

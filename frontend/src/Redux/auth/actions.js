@@ -16,6 +16,7 @@ export const authRegister = (data) => async (dispatch) => {
 
     const res = await axios.post(
       "https://techhubbackend-production.up.railway.app/user/signup",
+      // "http://localhost:8080/user/signup",
       // "https://trendy-vibes-backend-production.up.railway.app/user/register",
       {
         email: data.email,
@@ -48,10 +49,11 @@ export const authLogin = (data) => async (dispatch) => {
 
     const res = await axios.post(
       "https://techhubbackend-production.up.railway.app/user/login",
+      // "http://localhost:8080/user/login",
       // "https://trendy-vibes-backend-production.up.railway.app/user/login",
       data
     );
-    // console.log("res: ", res);
+    console.log("res: ", res);
     localStorage.setItem("user_name", res.data.userName);
 
     dispatch({
