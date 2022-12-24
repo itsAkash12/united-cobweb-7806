@@ -49,7 +49,7 @@ userRouter.post("/login", async (req, res) => {
       res.send("something went wrong please try after sometime");
     }
   } else {
-    res.send({ response: "please signup first" });
+    res.status(401).send({ response: "please signup first" });
   }
 });
 
