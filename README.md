@@ -1,4 +1,4 @@
-![imagelink](https://dcassetcdn.com/design_img/478216/181609/181609_3488538_478216_image.jpg)
+![imagelink](static/images/tech_hub.png)
 
 # BestBuy - Clone
 
@@ -34,7 +34,7 @@ All the images, icons, and links have taken from the original website (https://w
 ## Landing Page
 
 ![LandingPage](static/images/LandingPage.png)
-
+![LandingPage](static/images/home1.png)
 This is the landing page of our website. You can see and choose all latest and trending top products from here.
 
 ## SignUp Page
@@ -49,9 +49,9 @@ You can signup with our website from here .
 
 You can login to our website from here by entering required details.
 
-## Navigation Bar
+## Product Page
 
-![NavBar](static/images/NavigationBar.png)
+![ProductPage](static/images/ProductPage1.png)
 
 Here, you can choose a category of products whatever you want.
 
@@ -61,9 +61,9 @@ Here, you can choose a category of products whatever you want.
 
 Here, you can see all the products and whenever you hover on any product you will see ADD TO CART option, bu clicking the button you can add the products to cart.
 
-## Cart Page
+## SingleProduct Page
 
-![CartPage](static/images/CartPage.png)
+![SingleProductPage](static/images/SingleProductPage.png)
 
 Here, you can see all of your products which are added into cart, you can avail the discount by applyling the promocode in respective field and you can remove any product from here also.
 
@@ -73,6 +73,8 @@ Here, you can see all of your products which are added into cart, you can avail 
 
 In this page you can add your address to where your product should be delivered.
 
+![CheckoutPage](static/images/CheckoutPage.png)
+
 ## Payment Page
 
 ![PaymentPage](static/images/PaymentPage.png)
@@ -80,10 +82,6 @@ In this page you can add your address to where your product should be delivered.
 You can see lot of payment options here and you can choose any one of them to pay for your product.
 
 ## Summary Page
-
-![ThankyouPage](static/images/SummaryPage.png)
-
-Finally, Here you can see your order details and summary and by clicking continue you will be redirected to home page and you can continue the shopping.
 
 # Limitations
 
