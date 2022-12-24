@@ -18,6 +18,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import DealOfTheDay from "../pages/DealOfTheDay/DealOfTheDay";
 import Detailsitem from "../pages/Product Detail Page/Detailsitem";
 import ProductContainer from "../pages/ProductPage/ProductContainer";
+import { Cart } from "../Components/Cart/Cart";
+import PrivateRoute from "./PrivateRoute";
 
 function AllRoutes() {
   return (
@@ -92,6 +94,14 @@ function AllRoutes() {
         <Route path="/dealOfTheDay" element={<DealOfTheDay />}></Route>
         <Route path="/products/:id" element={<ProductContainer />} />
         <Route path="/products/single/:id" element={<Detailsitem />}></Route>
+        <Route
+          path="/cart"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );

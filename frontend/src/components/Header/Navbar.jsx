@@ -22,12 +22,14 @@ import { ChevronDownIcon, SearchIcon } from "@chakra-ui/icons";
 import SmallNavbar from "./SmallNavbar";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Badge } from "@mui/material";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function Navbar() {
   const [user, setUser] = useState(false);
   let token = localStorage.getItem("token");
   const store = useSelector((store) => store.auth.data.token);
-  console.log(store);
+  // console.log(store);
 
   console.log("token", token);
 
@@ -45,6 +47,9 @@ function Navbar() {
     timeout: 5000,
     maximumAge: 0,
   };
+
+  // const badge = useSelector((state) => state.cartreducer.carts);
+  // console.log(badge, badge.length, "badge");
 
   async function success(pos) {
     const crd = pos.coords;
@@ -166,13 +171,18 @@ function Navbar() {
           ></FontAwesomeIcon>
           {city !== "" ? <p>{`${city},  India`}</p> : <p>{`India`}</p>}
         </Box>
-        <Box className="location web_navbar">
-          <FontAwesomeIcon
-            className="icon_location"
-            icon={faCartShopping}
-          ></FontAwesomeIcon>
-          <p>Cart</p>
-        </Box>
+        <Link to="/cart">
+          <Box className="cart">
+            {/* <Badge badgeContent={badge.length} color="primary">
+              <ShoppingCartIcon style={{ fill: "#ffffff" }} />
+            </Badge> */}
+            <FontAwesomeIcon
+              className="icon_location"
+              icon={faCartShopping}
+            ></FontAwesomeIcon>
+            <p className="cart1">Cart</p>
+          </Box>
+        </Link>
         <Box className="mobile_container">
           <FontAwesomeIcon
             className="mobile_navbar"

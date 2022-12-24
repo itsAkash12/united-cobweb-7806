@@ -31,6 +31,7 @@ const Detailsitem = () => {
   const send = (e) => {
     console.log(e);
     dispatch(ADD(e));
+    alert("Added To Cart Successfully !");
   };
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(carts));
