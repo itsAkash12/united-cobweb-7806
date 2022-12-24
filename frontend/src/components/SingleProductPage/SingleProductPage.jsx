@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiOutlineShoppingCart } from "react-icons/ai"
+import {Link} from "react-router-dom"
 const SingleProductPage = ({id,imgUrl,price,title,save,brand,rate,top,end}) => {
     
   return (
@@ -22,7 +22,7 @@ const SingleProductPage = ({id,imgUrl,price,title,save,brand,rate,top,end}) => {
     <div className='w-1/3 '>
       <p className='text-sm sm:text-3xl font-bold mt-7 md:ml-24'>$ {price}</p>
       <p className='hidden sm:block bg-red-700 text-white font-bold w-fit px-2  md:ml-24'> {save}</p>
-      <button className='text-xs my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold sm:px-6 lg:py-2 rounded-lg' > <AiOutlineShoppingCart size={20}/>Add to card</button>
+    <Link to="/dealOfTheDay"> <button className='text-xs my-2 bg-yellow-300 text-black md:ml-24 sm:mt-8 flex md:gap-2 font-bold sm:px-6 lg:py-2 rounded-lg' >More Details</button></Link> 
     </div>
   </div>
   )

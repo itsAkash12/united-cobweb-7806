@@ -7,9 +7,7 @@ import SingleProductPage from "../../Components/SingleProductPage/SingleProductP
 import TopSinglepage from "../../Components/SingleProductPage/TopSinglepage";
 import SinglePageSideBar from "../../Components/SingleProductPage/SinglePageSideBar";
 
-import SingleProductPage from "../../Components/SingleProductPage/SingleProductPage";
-import TopSinglepage from "../../Components/SingleProductPage/TopSinglepage";
-import SinglePageSideBar from "../../Components/SingleProductPage/SinglePageSideBar";
+
 
 const IphoneProductPage = () => {
   const [data, setData] = useState([]);
