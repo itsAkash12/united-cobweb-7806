@@ -20,6 +20,8 @@ import Detailsitem from "../pages/Product Detail Page/Detailsitem";
 import ProductContainer from "../pages/ProductPage/ProductContainer";
 import { Cart } from "../Components/Cart/Cart";
 import PrivateRoute from "./PrivateRoute";
+import Payment from "../Components/Payment/Payment";
+import Checkout from "../Components/Checkout/Checkout"
 
 function AllRoutes() {
   return (
@@ -102,7 +104,10 @@ function AllRoutes() {
             </PrivateRoute>
           }
         />
+         <Route path="/payment" element={<Payment />} />
+         <Route path="/checkout" element={<Checkout />} />
       </Routes>
+     
     </div>
   );
 }

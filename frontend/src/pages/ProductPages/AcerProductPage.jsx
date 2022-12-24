@@ -4,15 +4,15 @@ import { useEffect } from "react";
 import { useState } from "react";
 
 import SingleProductPage from '../../Components/SingleProductPage/SingleProductPage'
-import TopSinglepage from "../../Components/SingleProductPage/TopSinglepage";
-import SinglePageSideBar from "../../Components/SingleProductPage/SinglePageSideBar";
+import TopSinglepage from '../../Components/SingleProductPage/TopSinglepage'
+import SinglePageSideBar from '../../Components/SingleProductPage/SinglePageSideBar'
 
 
 const AcerProductPage = () => {
   const [data,setData]=useState([])
  
   
-  let url="http://localhost:8080/product/acer"
+  let url="https://techhubbackend-production.up.railway.app/product/acer"
   const handleSubmit =async () => {
     
 await fetch(url,{
@@ -62,5 +62,4 @@ useEffect(()=>{
 </div>
   )
 }
-
-export default AcerProductPage;
+export default AcerProductPage
