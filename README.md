@@ -73,6 +73,8 @@ Here, you can see all of your products which are added into cart, you can avail 
 
 In this page you can add your address to where your product should be delivered.
 
+## Checkout Page
+
 ![CheckoutPage](static/images/CheckoutPage.png)
 
 ## Payment Page
@@ -94,7 +96,7 @@ This entire journey of making the project was awesome. We learned lots of things
 
 # Team Members 🤝🏻
 
-We have a team of 3 members :
+We have a team of 4 members :
 
 1. Jay Prakash Lohar
 
