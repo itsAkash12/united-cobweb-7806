@@ -35,9 +35,7 @@ export default function Checkout() {
       [d.name]: d.value,
     });
   };
-  const toLacalStorage = () => {
-    localStorage.setItem("formData", JSON.stringify(data));
-  };
+
   return (
     <div
       style={{
@@ -58,10 +56,11 @@ export default function Checkout() {
           marginLeft: "5%",
           borderRightColor: "red",
           height: "auto",
+          marginRight: "50px",
         }}
       >
         <div style={{ backgroundColor: "", margin: "2%" }}>
-          <h2 style={{ fontSize: "14px" }}> Shipping</h2>
+          <h2 style={{ fontSize: "22px", fontWeight: "bold" }}> Shipping</h2>
 
           <div style={{ fontSize: "14px", lineHeight: "3" }}>
             {" "}
