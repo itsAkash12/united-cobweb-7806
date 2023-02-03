@@ -52,7 +52,7 @@ export const authLogin = (data) => async (dispatch) => {
 
       data
     );
-    console.log("res: ", res);
+    // console.log("res: ", res);
     localStorage.setItem("user_name", res.data.userName);
 
     dispatch({
@@ -64,7 +64,7 @@ export const authLogin = (data) => async (dispatch) => {
       },
     });
   } catch (error) {
-    // console.log("error: ", error);
+    console.log("error: ", error);
 
     dispatch({
       type: AUTH_LOGIN_FAILURE,

@@ -31,7 +31,7 @@ function Navbar() {
   const store = useSelector((store) => store.auth.data.token);
   // console.log(store);
 
-  console.log("token", token);
+  // console.log("token", token);
 
   const handlelogout = () => {
     localStorage.removeItem("token");
@@ -76,7 +76,7 @@ function Navbar() {
     setUser(token);
   }, [user, store]);
 
-  console.log("user", user);
+  // console.log("user", user);
   return (
     <Box id="navbar_container">
       <Box className="nav_items">
