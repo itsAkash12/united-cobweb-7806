@@ -39,7 +39,7 @@ function Navbar() {
     alert("LogOut Successfully 😊✔");
   };
 
-  const [city, setCity] = useState("");
+  let [city, setCity] = useState("");
   let key = "dae6521ae39fc64f8d201f17c57efeb5";
   let data;
   const options = {
@@ -59,7 +59,7 @@ function Navbar() {
       );
       data = await res.json();
       city = setCity(data.name);
-      console.log(data);
+
       console.log(city);
     } catch (err) {
       console.log(err);
@@ -156,7 +156,7 @@ function Navbar() {
                       border="1px solid #0046BE"
                       _hover={{ bg: "#0046BE", color: "white" }}
                     >
-                      Sign In
+                      Sign Up
                     </Button>
                   </Link>
                 </Box>

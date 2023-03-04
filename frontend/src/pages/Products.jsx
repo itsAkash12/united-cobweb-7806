@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import ProductBanner from "../Components/Products/ProductBanner";
 import ProductTopCrousal from "../Components/Products/ProductTopCrousal";
 import ProductData from "./db.json"
-function Products() {
- 
 
+
+
+function Products() {
   return (
     <div>
       <ProductBanner />
