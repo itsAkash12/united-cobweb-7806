@@ -2,13 +2,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCPikojaQTsqAwO7ArOCNo7cxt7t4khtQg",
-  authDomain: "fir-auth-1132-36d79.firebaseapp.com",
-  projectId: "fir-auth-1132-36d79",
-  storageBucket: "fir-auth-1132-36d79.appspot.com",
-  messagingSenderId: "254465869911",
-  appId: "1:254465869911:web:7b73b77b6fbb3048bbfb12",
-  measurementId: "G-CCBZCPHM6R"
+  apiKey: "AIzaSyC73aLGbsQixSWBn19EqFBfPXsBkEHKWbM",
+  authDomain: "bestbuy-e2534.firebaseapp.com",
+  projectId: "bestbuy-e2534",
+  storageBucket: "bestbuy-e2534.appspot.com",
+  messagingSenderId: "466729387659",
+  appId: "1:466729387659:web:d40ddb5295d09ebe12768e",
+  measurementId: "G-SCM1NT2YLN",
 };
 
 const app = initializeApp(firebaseConfig);
