@@ -30,7 +30,6 @@ const initialState = {
   password: "",
 };
 
-
 function Login() {
   const [loading, setLoading] = useState(false);
   const toast = useToast();
@@ -133,7 +132,7 @@ function Login() {
             >
               LOGIN
             </ModalHeader>
-            {/* <Img src="https://shopyourwardrobe.com/wp-content/uploads/2013/01/cost-of-being-a-shopaholic.jpg" /> */}
+
             <ModalBody pb={6}>
               <FormControl>
                 <FormLabel>Email</FormLabel>
@@ -142,6 +141,7 @@ function Login() {
                   placeholder="Enter your email"
                   name="email"
                   onChange={handleChange}
+                  required={true}
                 />
               </FormControl>
 
@@ -152,6 +152,7 @@ function Login() {
                   placeholder="Enter your password"
                   name="password"
                   onChange={handleChange}
+                  required={true}
                 />
               </FormControl>
             </ModalBody>

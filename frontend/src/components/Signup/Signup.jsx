@@ -9,6 +9,8 @@ import {
   Button,
   InputGroup,
   InputLeftElement,
+  FormLabel,
+  Text,
 } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { EmailIcon, LockIcon } from "@chakra-ui/icons";
@@ -32,7 +34,6 @@ function Signup() {
   const authState = useSelector((state) => state.auth.userRegister);
   const dispatch = useDispatch();
 
-  // console.log(authState);
   React.useEffect(() => {
     if (authState.message === "user already registerd please login") {
       toast({
@@ -66,7 +67,6 @@ function Signup() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(formData);
     dispatch(authRegister(formData));
   };
   return (
@@ -82,71 +82,105 @@ function Signup() {
         p={4}
         border="1px solid gray"
       >
-        <Heading textAlign={"center"}>Register to be one of us</Heading>
-        <Stack py={8} gap={4} w={{ base: "85%", md: "70%" }} m="auto">
-          <InputGroup>
-            <InputLeftElement
-              pointerEvents="none"
-              children={<FontAwesomeIcon icon={faUser} />}
-            />
-            <Input
-              type={"text"}
-              onChange={handleChange}
-              name="name"
-              placeholder="Username"
-              value={formData.name}
-            />
-          </InputGroup>
-          <InputGroup>
-            {" "}
-            <InputLeftElement
-              pointerEvents="none"
-              children={<EmailIcon color="gray.600" />}
-            />
-            <Input
-              type="email"
-              onChange={handleChange}
-              name="email"
-              placeholder="Email"
-              value={formData.email}
-              required={true}
-            />
-          </InputGroup>
-          <InputGroup>
-            <InputLeftElement
-              pointerEvents="none"
-              children={<LockIcon color="gray.600" />}
-            />
-            <Input
-              type={"password"}
-              onChange={handleChange}
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-            />
-          </InputGroup>
+        <Heading textAlign={"center"}>Signup</Heading>
+        <Stack
+          py={8}
+          gap={4}
+          w={{ base: "90%", md: "70%", lg: "90%" }}
+          m="auto"
+        >
+          <form onSubmit={handleSubmit}>
+            <FormLabel mt="10px">Username</FormLabel>
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents="none"
+                children={<FontAwesomeIcon icon={faUser} />}
+              />
 
-          <Button
-            bg="blue"
-            onClick={handleSubmit}
-            _hover={{ bg: "green" }}
-            color={"white"}
-            fontSize="18px"
-            w={"100%"}
-          >
-            {authState.loading ? "Registering..." : "Register"}
-          </Button>
-          <Button onClick={() => navigate("/login")}>
-            Already a User ? Login
-          </Button>
+              <Input
+                type={"text"}
+                onChange={handleChange}
+                name="name"
+                placeholder="Enter your username"
+                value={formData.name}
+                required={true}
+                variant="flushed"
+              />
+            </InputGroup>
+            <FormLabel mt="20px">Email</FormLabel>
+            <InputGroup>
+              {" "}
+              <InputLeftElement
+                pointerEvents="none"
+                children={<EmailIcon color="gray.600" />}
+              />
+              <Input
+                type="email"
+                onChange={handleChange}
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                required={true}
+                variant="flushed"
+              />
+            </InputGroup>
+            <FormLabel mt="20px">Password</FormLabel>
+            <InputGroup>
+              <InputLeftElement
+                pointerEvents="none"
+                children={<LockIcon color="gray.600" />}
+              />
+              <Input
+                type={"password"}
+                onChange={handleChange}
+                name="password"
+                placeholder="Enter your password"
+                value={formData.password}
+                required={true}
+                variant="flushed"
+              />
+            </InputGroup>
+
+            <Button
+              bg="blue"
+              // onClick={handleSubmit}
+              _hover={{ bg: "green" }}
+              color={"white"}
+              fontSize="18px"
+              w={"100%"}
+              type="submit"
+              borderRadius="20px"
+              mt="20px"
+            >
+              {authState.loading ? "Registering..." : "Register"}
+            </Button>
+          </form>
+          <Text textAlign="center" fontWeight="500" fontSize="16px">
+            Already a User ?{" "}
+            <span
+              onClick={() => navigate("/login")}
+              style={{
+                color: "blue",
+                fontWeight: "bold",
+                cursor: "pointer",
+                fontSize: "16px",
+              }}
+            >
+              Login
+            </span>
+          </Text>
         </Stack>
       </Box>
-      <Box display={{ base: "none", md: "inherit" }}>
+      <Box
+        display={{ base: "none", md: "inherit", lg: "flex" }}
+        justifyContent="center"
+        alignItems="center"
+      >
         <Img
-          w={"100%"}
-          h={"100%"}
+          w={"80%"}
+          h={"80%"}
           objectFit="contain"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL4fvlV-lQy-A6OkJZ9q8V_BWNW7oI0q_MVevmxVvEXR72tQBYhJcu1EbunlZKfu6LLMs&usqp=CAU"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXW0Q2NQdwgByNxjZG89vnum8kNfCTzwSqNg&usqp=CAU"
         />
       </Box>
     </Grid>
