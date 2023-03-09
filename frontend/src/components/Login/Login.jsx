@@ -24,6 +24,8 @@ import { AUTH_LOGIN_RESET } from "../../Redux/auth/actionTypes";
 import GoogleButton from "react-google-button";
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../../firebase";
+import { BsFacebook } from "react-icons/bs";
+import { AiFillTwitterCircle, AiFillGoogleCircle } from "react-icons/ai";
 
 const initialState = {
   email: "",
@@ -122,7 +124,7 @@ function Login() {
       <ChakraProvider>
         <Modal isOpen={true} onClose={onClose} size={{ base: "sm", md: "lg" }}>
           <ModalOverlay />
-          <ModalContent w="450px">
+          <ModalContent w="450px" p="10px">
             <ModalHeader
               textAlign="center"
               fontWeight="bold"
@@ -133,59 +135,66 @@ function Login() {
               LOGIN
             </ModalHeader>
 
-            <ModalBody pb={6}>
-              <FormControl>
-                <FormLabel>Email</FormLabel>
-                <Input
-                  type={"email"}
-                  placeholder="Enter your email"
-                  name="email"
-                  onChange={handleChange}
-                  required={true}
-                />
-              </FormControl>
+            <form onSubmit={handleSubmit}>
+              <ModalBody pb={6}>
+                <FormControl>
+                  <FormLabel>Email</FormLabel>
+                  <Input
+                    type={"email"}
+                    placeholder="Enter your email"
+                    name="email"
+                    onChange={handleChange}
+                    required={true}
+                    variant="flushed"
+                  />
+                </FormControl>
 
-              <FormControl mt={4}>
-                <FormLabel>Password</FormLabel>
-                <Input
-                  type={"password"}
-                  placeholder="Enter your password"
-                  name="password"
-                  onChange={handleChange}
-                  required={true}
-                />
-              </FormControl>
-            </ModalBody>
+                <FormControl mt={4}>
+                  <FormLabel>Password</FormLabel>
+                  <Input
+                    type={"password"}
+                    placeholder="Enter your password"
+                    name="password"
+                    onChange={handleChange}
+                    required={true}
+                    variant="flushed"
+                  />
+                </FormControl>
+              </ModalBody>
 
-            <ModalFooter>
-              <Button onClick={handleSubmit} colorScheme="pink" w="100%">
-                CONTINUE
-              </Button>
-            </ModalFooter>
+              <ModalFooter>
+                <Button
+                  colorScheme="blue"
+                  w="100%"
+                  type="submit"
+                  borderRadius="20px"
+                >
+                  CONTINUE
+                </Button>
+              </ModalFooter>
+            </form>
 
-            <Button
-              w="89%"
-              ml="25px"
-              onClick={() => {
-                // onClose();
-                navigate("/");
-              }}
-            >
-              Cancel
-            </Button>
             <p className="login_or">or</p>
-            {/* ----- google Authenticated ----- */}
 
-            <GoogleButton
-              type="dark"
-              onClick={handleGoogleSignIn}
-              style={{
-                width: "89%",
-                marginBottom: "40px",
-                marginLeft: "25px",
-                backgroundColor: "#4285f4",
-              }}
-            />
+            <Box
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              mt="20px"
+            >
+              <BsFacebook className="faceBook" />
+              <AiFillTwitterCircle className="twitter" />
+              <AiFillGoogleCircle
+                className="google"
+                onClick={handleGoogleSignIn}
+              />
+            </Box>
+
+            <p className="login">Have not account yet?</p>
+            <p onClick={() => navigate("/signup")} className="signup">
+              {" "}
+              SIGN UP
+            </p>
           </ModalContent>
         </Modal>
       </ChakraProvider>

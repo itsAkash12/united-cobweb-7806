@@ -39,3 +39,52 @@
   font-weight: bold;
   margin: 5px 0px 5px 0px;
 }
+
+.faceBook {
+  width: 30px;
+  height: 30px;
+  background-color: #ffff;
+  color: #2e2eb8;
+  cursor: pointer;
+  border-radius: 100%;
+}
+.twitter {
+  width: 35px;
+  height: 35px;
+  background-color: #ffff;
+  color: #33ccff;
+  border-radius: 100%;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.google {
+  width: 35px;
+  height: 35px;
+  background-color: #ffff;
+  color: red;
+  border-radius: 100%;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.login {
+  text-align: center;
+  cursor: pointer;
+  margin: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #58595b;
+}
+
+.signup {
+  color: #58595b;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup:hover {
+  color: blue;
+}
