@@ -115,6 +115,7 @@ let offers = [
   { title: "Online Only", value: "onlineOnly" },
 ];
 const ProductContainer = () => {
+  const [loading, setLoading] = useState(true);
   const [filterOtions, setFilterOptions] = useState([]);
   const [currantOffers, setCurrantOffers] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -125,9 +126,10 @@ const ProductContainer = () => {
   );
   const dispatch = useDispatch();
   const { id } = useParams();
-  console.log(id);
+
   useEffect(() => {
     dispatch(getData(id));
+    setLoading(false);
   }, [dispatch]);
 
   const getFilteredOpt = (e) => {
@@ -187,7 +189,6 @@ const ProductContainer = () => {
   return (
     <ProductPageContainer>
       <div className="CONTAINER">
-        <p className="titleOfComp">Products</p>
         <div className="container">
           <div className="sideBarOptions">
             {/* Categories Accordian */}
@@ -435,7 +436,9 @@ const ProductContainer = () => {
                 </p>
               </div>
             </div>
+            <p className="titleOfComp">Products</p>
             <div className="productGrid">
+              {loading && <h1>Loading...</h1>}
               {[...(filterClick ? filterData : products)].map((el, i) => {
                 return <ProductCard {...el} key={i} />;
               })}
