@@ -60,7 +60,7 @@ function Navbar() {
       data = await res.json();
       city = setCity(data.name);
 
-      console.log(city);
+      // console.log(city);
     } catch (err) {
       console.log(err);
     }

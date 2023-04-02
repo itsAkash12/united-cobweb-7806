@@ -191,7 +191,7 @@ const Footer = () => {
             </Box>
             <Box mt="20px">
               {" "}
-              <Button color="#fff" bg="#0046be">
+              <Button color="#fff" bg="#0046be" _hover="none">
                 Sign Up
               </Button>
             </Box>

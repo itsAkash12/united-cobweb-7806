@@ -438,7 +438,17 @@ const ProductContainer = () => {
             </div>
             <p className="titleOfComp">Products</p>
             <div className="productGrid">
-              {loading && <h1>Loading...</h1>}
+              {isLoading && (
+                <h1
+                  style={{
+                    textAlign: "center",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Loading...
+                </h1>
+              )}
               {[...(filterClick ? filterData : products)].map((el, i) => {
                 return <ProductCard {...el} key={i} />;
               })}

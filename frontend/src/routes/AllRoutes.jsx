@@ -22,106 +22,110 @@ import { Cart } from "../Components/Cart/Cart";
 import PrivateRoute from "./PrivateRoute";
 import Payment from "../Components/Payment/Payment";
 import Checkout from "../Components/Checkout/Checkout";
+import Error from "../pages/Error";
 
 function AllRoutes() {
   return (
-    <div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <ChakraProvider>
-              <Homepage />
-            </ChakraProvider>
-          }
-        ></Route>
-        <Route
-          path="/login"
-          element={
-            <ChakraProvider>
-              <Login />
-            </ChakraProvider>
-          }
-        ></Route>
-        <Route
-          path="/signup"
-          element={
-            <ChakraProvider>
-              <Signup />
-            </ChakraProvider>
-          }
-        ></Route>
-        <Route
-          path="/giftcards"
-          element={
-            <ChakraProvider>
-              <GiftCards />
-            </ChakraProvider>
-          }
-        ></Route>
-        <Route path="/acerproductpage" element={<AcerProductPage />}></Route>
-        <Route
-          path="/amazonproductpage"
-          element={<AmazonProductPage />}
-        ></Route>
-        <Route
-          path="/androidproductpage"
-          element={<AndroidProductPage />}
-        ></Route>
-        <Route
-          path="/iphoneproductpage"
-          element={<IphoneProductPage />}
-        ></Route>
-        <Route
-          path="/latestproductpage"
-          element={<LatestProductPage />}
-        ></Route>
-        <Route
-          path="/marketplaceproductpage"
-          element={<MarketPlaceProductPage />}
-        ></Route>
-        <Route
-          path="/smarthomeproductpage"
-          element={<SmarthomeProductPage />}
-        ></Route>
-        <Route
-          path="/sponseredproductpage"
-          element={<SponseredProductPage />}
-        ></Route>
-        <Route
-          path="/topdealsproductpage"
-          element={<TopdealsProductPage />}
-        ></Route>
-        <Route path="/products" element={<Products />}></Route>
-        <Route path="/dealOfTheDay" element={<DealOfTheDay />}></Route>
-        <Route path="/products/:id" element={<ProductContainer />} />
-        <Route path="/products/single/:id" element={<Detailsitem />}></Route>
-        <Route
-          path="/cart"
-          element={
-            <PrivateRoute>
-              <Cart />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/payment"
-          element={
-            <PrivateRoute>
-              <Payment />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/checkout"
-          element={
-            <PrivateRoute>
-              <Checkout />
-            </PrivateRoute>
-          }
-        />
-      </Routes>
-    </div>
+    <>
+      <div>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ChakraProvider>
+                <Homepage />
+              </ChakraProvider>
+            }
+          ></Route>
+          <Route
+            path="/login"
+            element={
+              <ChakraProvider>
+                <Login />
+              </ChakraProvider>
+            }
+          ></Route>
+          <Route
+            path="/signup"
+            element={
+              <ChakraProvider>
+                <Signup />
+              </ChakraProvider>
+            }
+          ></Route>
+          <Route
+            path="/giftcards"
+            element={
+              <ChakraProvider>
+                <GiftCards />
+              </ChakraProvider>
+            }
+          ></Route>
+          <Route path="/acerproductpage" element={<AcerProductPage />}></Route>
+          <Route
+            path="/amazonproductpage"
+            element={<AmazonProductPage />}
+          ></Route>
+          <Route
+            path="/androidproductpage"
+            element={<AndroidProductPage />}
+          ></Route>
+          <Route
+            path="/iphoneproductpage"
+            element={<IphoneProductPage />}
+          ></Route>
+          <Route
+            path="/latestproductpage"
+            element={<LatestProductPage />}
+          ></Route>
+          <Route
+            path="/marketplaceproductpage"
+            element={<MarketPlaceProductPage />}
+          ></Route>
+          <Route
+            path="/smarthomeproductpage"
+            element={<SmarthomeProductPage />}
+          ></Route>
+          <Route
+            path="/sponseredproductpage"
+            element={<SponseredProductPage />}
+          ></Route>
+          <Route
+            path="/topdealsproductpage"
+            element={<TopdealsProductPage />}
+          ></Route>
+
+          <Route path="/products" element={<Products />}></Route>
+          <Route path="/dealOfTheDay" element={<DealOfTheDay />}></Route>
+          <Route path="/products/:id" element={<ProductContainer />} />
+          <Route path="/products/single/:id" element={<Detailsitem />}></Route>
+          <Route
+            path="/cart"
+            element={
+              <PrivateRoute>
+                <Cart />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/payment"
+            element={
+              <PrivateRoute>
+                <Payment />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <PrivateRoute>
+                <Checkout />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </div>
+    </>
   );
 }
 
